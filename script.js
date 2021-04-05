@@ -70,8 +70,8 @@ function move(collumm) {
         changeDiv(player, position, collumm);
         tabuleiro[x][0] = player;
         console.log(tabuleiro);
-
         return "";
+
       }
     }
   }
@@ -190,13 +190,13 @@ function changeDiv(p, position, collum) {
   let div = document.getElementById(strId);
   
   if (p === 1) {
-    // div.style.class = "player1";
-    div.style.background = 'firebrick';
+    div.classList.add("player1");
+    
     return ''
   } else {
-    div.style.background = 'gold';
+    div.classList.add("player2");
     return ''
-    // div.style.class = "player2";
+    
   }
 }
 // changeDiv
