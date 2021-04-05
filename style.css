@@ -130,7 +130,7 @@ body{
 }
 
 #box-header{
-    background-color: #0e4675;
+    background-color: #1b60a5;
     width: 120px;
     height: 160px;
     border-radius: 8px;
@@ -138,6 +138,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 2px solid white;
 }
 
 #title{
