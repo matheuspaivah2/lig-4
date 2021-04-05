@@ -5,25 +5,42 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
     list-style: none;
     text-decoration: none;
 }
-
+body{
+    background-color: #292727;
+    font-family: 'Londrina Solid', cursive;
+}
 #game{
+    width: 800px;
+    margin: 0 auto;
+}
 
+#box-tabuleiro{
+    width: 720px;
+    height: 520px;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    background-color: white;
 }
 
 #tabuleiro{
-    width: 750px;
-    height: 550px;
+    width: 700px;
+    height: 500px;
     border: 3px solid black;
     border-radius: 4px;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     margin: 0 auto;
-    margin-top: 50px;
+    background-color: #0060a5;
 }
 
 .line{
-    height: 548px;
-    width: 106.8px;
+    height: 498px;
+    width: 100px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -32,15 +49,13 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
     cursor: pointer;
 }
 
-.line:hover{
-    background-color: dodgerblue;
-}
 
 .cel{
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     border: 3px solid black;
     border-radius: 30%;
+    background-color: white;
 }
 
 .player1{
@@ -49,4 +64,84 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
 
 .player2{
     background-color: gold;
+}
+
+#controls-top{
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+
+}
+#controls{
+    margin: 0 auto;
+    width: 800px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    row-gap: 50px;
+    align-items: center;
+}
+
+.bt{
+    padding: 4px;
+    font-size: 60px;
+    font-weight: bolder;
+    border-radius: 4px;
+    border: 4px solid white;
+    height: 85px;
+    width: 300px;
+    background-color: #0068a5fc;
+    color: white;
+    font-family: 'Londrina Solid', cursive;
+}
+
+
+
+
+/* HEADER */
+#logo{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid white;
+    background-color: #3e506b;
+
+}
+
+.logo-line{
+    width: 33.3px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo-cel{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 30%;
+    background-color: white;
+}
+
+#box-header{
+    background-color: #0e4675;
+    width: 120px;
+    height: 160px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title{
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
 }
