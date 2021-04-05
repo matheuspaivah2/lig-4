@@ -1,12 +1,11 @@
 let tabuleiro = [
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0]
-            ]
-
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+];
 
 let amountPlayer1 = 0;
 let amountPlayer2 = 0;
@@ -60,8 +59,6 @@ collum7.addEventListener("click", function () {
 
 //function move
 function move(collumm) {
-
-
   if (collumm === "line1") {
     for (let x = 5; x >= 0; x--) {
       if (tabuleiro[x][0] === 0) {
@@ -69,9 +66,9 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][0] = player;
+        victory(x,0);
         console.log(tabuleiro);
         return "";
-
       }
     }
   }
@@ -82,6 +79,7 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][1] = player;
+        victory(x, 1);
         return "";
       }
     }
@@ -93,6 +91,7 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][2] = player;
+        victory(x, 2);
         return "";
       }
     }
@@ -104,6 +103,7 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][3] = player;
+        victory(x, 3);
         return "";
       }
     }
@@ -115,6 +115,7 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][4] = player;
+        victory(x, 4);
         return "";
       }
     }
@@ -126,18 +127,19 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][5] = player;
+        victory(x, 5);
         return "";
       }
     }
   }
   if (collumm === "line7") {
-    
     for (let x = 5; x >= 0; x--) {
       if (tabuleiro[x][6] === 0) {
         player = switchPlayer(player);
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][6] = player;
+        victory(x, 6);
         return "";
       }
     }
@@ -150,225 +152,162 @@ function move(collumm) {
 console.log(tabuleiro);
 
 const vertical = (a, b) => {
+  let count = 1;
 
-    let count = 1;
-
-    for (let i = 1; i <= 5; i++) {
-
-        if (a + i > 5) {
-
-            break;
-        }
-        if (tabuleiro[a + i][b] !== undefined) {
-
-            if (tabuleiro[a][b] === tabuleiro[a + i][b] ) {
-
-                count++;
-            }
-            else {
-
-                break;
-            }
-        }
-        
+  for (let i = 1; i <= 5; i++) {
+    if (a + i > 5) {
+      break;
     }
-    for (let i = 1; i <= 5; i++) {
-
-        if(a - i < 0){
-
-            break;
-        }
-        if (tabuleiro[a - i][b] !== undefined) {
-
-            if (tabuleiro[a][b] === tabuleiro[a - i][b] ) {
-
-                count++;
-            }
-            else {
-
-                break;
-            }
-        }
-        
+    if (tabuleiro[a + i][b] !== undefined) {
+      if (tabuleiro[a][b] === tabuleiro[a + i][b]) {
+        count++;
+      } else {
+        break;
+      }
     }
-    console.log(count, "vertical");
-    return count;
-}
+  }
+  for (let i = 1; i <= 5; i++) {
+    if (a - i < 0) {
+      break;
+    }
+    if (tabuleiro[a - i][b] !== undefined) {
+      if (tabuleiro[a][b] === tabuleiro[a - i][b]) {
+        count++;
+      } else {
+        break;
+      }
+    }
+  }
+  console.log(count, "vertical");
+  return count;
+};
 const horizontal = (a, b) => {
+  let count = 1;
 
-    let count = 1;
-
-    for (let i = 1; i <= 5; i++) {
-        if (b + i > 6) {
-            break;
-        }
-
-        if (tabuleiro[a][b + i] !== undefined) {
-
-            if (tabuleiro[a][b] === tabuleiro[a][b + i] ) {
-
-                count++;
-            }
-            else {
-
-                break;
-            }
-        }
-        
+  for (let i = 1; i <= 5; i++) {
+    if (b + i > 6) {
+      break;
     }
-    for (let i = 1; i <= 5; i++) {
-        if (b - i < 0) {
-            break;
-        }
-        if (tabuleiro[a][b - i] !== undefined) {
 
-            if (tabuleiro[a][b] === tabuleiro[a][b - i] ) {
-
-                count++;
-            }
-            else {
-
-                break;
-            }
-        }
-        
+    if (tabuleiro[a][b + i] !== undefined) {
+      if (tabuleiro[a][b] === tabuleiro[a][b + i]) {
+        count++;
+      } else {
+        break;
+      }
     }
-    console.log(count, "horizontal");
-    return count;
-}
+  }
+  for (let i = 1; i <= 5; i++) {
+    if (b - i < 0) {
+      break;
+    }
+    if (tabuleiro[a][b - i] !== undefined) {
+      if (tabuleiro[a][b] === tabuleiro[a][b - i]) {
+        count++;
+      } else {
+        break;
+      }
+    }
+  }
+  console.log(count, "horizontal");
+  return count;
+};
 const diagonal1 = (a, b) => {
+  let count = 1;
 
-    let count = 1;
-    
-    for (let i = 1; i <= 5; i++) {
-
-        if (a + i > 5 || b + i > 6) {
-
-            break;
-        }
-        if (tabuleiro[a + i][b + i] !== undefined) {
-
-            if (tabuleiro[a][b] === tabuleiro[a + i][b + i] ) {
-
-                count++;
-            }
-            else {
-
-                break;
-            }
-        }
-        
+  for (let i = 1; i <= 5; i++) {
+    if (a + i > 5 || b + i > 6) {
+      break;
     }
-    
-    for (let i = 1; i <= 5; i++) {
-
-        if(a - i < 0 || b - i < 0){
-
-            break;
-        }
-        if (tabuleiro[a - i][b - i] !== undefined) {
-
-            if (tabuleiro[a][b] === tabuleiro[a - i][b - i] ) {
-
-                count++;
-            }
-            else {
-
-                break;
-            }
-        }
-        
+    if (tabuleiro[a + i][b + i] !== undefined) {
+      if (tabuleiro[a][b] === tabuleiro[a + i][b + i]) {
+        count++;
+      } else {
+        break;
+      }
     }
-    console.log(count, "diagonal1");
-    return count;
-}
+  }
+
+  for (let i = 1; i <= 5; i++) {
+    if (a - i < 0 || b - i < 0) {
+      break;
+    }
+    if (tabuleiro[a - i][b - i] !== undefined) {
+      if (tabuleiro[a][b] === tabuleiro[a - i][b - i]) {
+        count++;
+      } else {
+        break;
+      }
+    }
+  }
+  console.log(count, "diagonal1");
+  return count;
+};
 const diagonal2 = (a, b) => {
+  let count = 1;
 
-    let count = 1;
-    
-    for (let i = 1; i <= 5; i++) {
-
-        if (a + i > 5 || b - i < 0) {
-
-            break;
-        }
-        if (tabuleiro[a + i][b - i] !== undefined) {
-
-            if (tabuleiro[a][b] === tabuleiro[a + i][b - i] ) {
-
-                count++;
-            }
-            else {
-
-                break;
-            }
-        }
-        
+  for (let i = 1; i <= 5; i++) {
+    if (a + i > 5 || b - i < 0) {
+      break;
     }
-    
-    for (let i = 1; i <= 5; i++) {
-
-        if(a - i < 0 || b + i > 6){
-
-            break;
-        }
-        if (tabuleiro[a - i][b + i] !== undefined) {
-
-            if (tabuleiro[a][b] === tabuleiro[a - i][b + i] ) {
-
-                count++;
-            }
-            else {
-
-                break;
-            }
-        }
-        
+    if (tabuleiro[a + i][b - i] !== undefined) {
+      if (tabuleiro[a][b] === tabuleiro[a + i][b - i]) {
+        count++;
+      } else {
+        break;
+      }
     }
-    console.log(count, "diagonal2");
-    return count;
-}
+  }
 
-const victory = (a ,b) => {
+  for (let i = 1; i <= 5; i++) {
+    if (a - i < 0 || b + i > 6) {
+      break;
+    }
+    if (tabuleiro[a - i][b + i] !== undefined) {
+      if (tabuleiro[a][b] === tabuleiro[a - i][b + i]) {
+        count++;
+      } else {
+        break;
+      }
+    }
+  }
+  console.log(count, "diagonal2");
+  return count;
+};
 
-    let count = 0;
-    count = horizontal(a, b);
-    if (count > 3 ) {
-        console.log('Victory');
-        return true;
-    }
-    else {
-        count = 0
-    }
-    count = vertical(a, b);
-    if (count > 3 ) {
-        console.log('Victory');
-        return true;
-    }
-    else {
-        count = 0
-    }
-    count = diagonal1(a, b);
-    if (count > 3 ) {
-        console.log('Victory');
-        return true;
-    }
-    else {
-        count = 0
-    }
-    count = diagonal2(a, b);
-    if (count > 3 ) {
-        console.log('Victory');
-        return true;
-    }
-    else {
-        count = 0
-    }
+const victory = (a, b) => {
+  let count = 0;
+  count = horizontal(a, b);
+  if (count > 3) {
+    console.log("Victory");
+    return true;
+  } else {
+    count = 0;
+  }
+  count = vertical(a, b);
+  if (count > 3) {
+    console.log("Victory");
+    return true;
+  } else {
+    count = 0;
+  }
+  count = diagonal1(a, b);
+  if (count > 3) {
+    console.log("Victory");
+    return true;
+  } else {
+    count = 0;
+  }
+  count = diagonal2(a, b);
+  if (count > 3) {
+    console.log("Victory");
+    return true;
+  } else {
+    count = 0;
+  }
 
-    return false;
-
-    
-}
+  return false;
+};
 
 //verifica vitória
 
@@ -406,20 +345,17 @@ function reset() {
 
 // changeDiv
 function changeDiv(p, position, collum) {
-  
-
-  let strId = collum + "-cel" + (position+1);
-  console.log(strId) 
+  let strId = collum + "-cel" + (position + 1);
+  console.log(strId);
   let div = document.getElementById(strId);
-  
+
   if (p === 1) {
     div.classList.add("player1");
-    
-    return ''
+
+    return "";
   } else {
     div.classList.add("player2");
-    return ''
-    
+    return "";
   }
 }
 // changeDiv
