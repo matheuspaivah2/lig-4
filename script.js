@@ -1,12 +1,11 @@
 let tabuleiro = [
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0]
-            ]
-
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+];
 
 let amountPlayer1 = 0;
 let amountPlayer2 = 0;
@@ -60,8 +59,6 @@ collum7.addEventListener("click", function () {
 
 //function move
 function move(collumm) {
-
-
   if (collumm === "line1") {
     for (let x = 5; x >= 0; x--) {
       if (tabuleiro[x][0] === 0) {
@@ -71,7 +68,6 @@ function move(collumm) {
         tabuleiro[x][0] = player;
         console.log(tabuleiro);
         return "";
-
       }
     }
   }
@@ -131,7 +127,6 @@ function move(collumm) {
     }
   }
   if (collumm === "line7") {
-    
     for (let x = 5; x >= 0; x--) {
       if (tabuleiro[x][6] === 0) {
         player = switchPlayer(player);
@@ -183,20 +178,15 @@ function reset() {
 
 // changeDiv
 function changeDiv(p, position, collum) {
-  
-
-  let strId = collum + "-cel" + (position+1);
-  console.log(strId) 
+  let strId = collum + "-cel" + (position + 1);
   let div = document.getElementById(strId);
-  
+
   if (p === 1) {
     div.classList.add("player1");
-    
-    return ''
+    return "";
   } else {
     div.classList.add("player2");
-    return ''
-    
+    return "";
   }
 }
 // changeDiv
