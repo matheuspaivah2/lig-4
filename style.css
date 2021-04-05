@@ -8,6 +8,8 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
 body{
     background-color: #292727;
     font-family: 'Londrina Solid', cursive;
+    background-image: url('images/f2b81de7d19eb3d3dcea52ab5011d8fcf0f4c97a.jpg');
+    background-size: cover;
 }
 #game{
     width: 800px;
@@ -35,7 +37,7 @@ body{
     justify-content: center;
     align-items: flex-end;
     margin: 0 auto;
-    background-color: #0060a5;
+    background-color: #136596;
 }
 
 .line{
@@ -86,18 +88,20 @@ body{
 
 .bt{
     padding: 4px;
-    font-size: 60px;
+    font-size: 70px;
     font-weight: bolder;
-    border-radius: 4px;
+    border-radius: 8px;
     border: 4px solid white;
-    height: 85px;
-    width: 300px;
-    background-color: #0068a5fc;
+    height: 95px;
+    width: 310px;
+    background-color: #1b4863fc;
     color: white;
     font-family: 'Londrina Solid', cursive;
 }
 
-
+#bt-playAgain{
+    width: 350px;
+}
 
 
 /* HEADER */
@@ -129,8 +133,8 @@ body{
     background-color: white;
 }
 
-#box-header{
-    background-color: #1b60a5;
+#box-logo{
+    background-color: #1a4762;
     width: 120px;
     height: 160px;
     border-radius: 8px;
@@ -145,4 +149,22 @@ body{
     color: white;
     font-size: 40px;
     font-weight: bolder;
+}
+
+
+
+
+/* footer */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 8px;
+    
+
+}
+footer p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
 }
