@@ -5,3 +5,47 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
     list-style: none;
     text-decoration: none;
 }
+
+#game{
+
+}
+
+#tabuleiro{
+    width: 750px;
+    height: 550px;
+    border: 3px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.line{
+    height: 548px;
+    width: 106.8px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.line:hover{
+    background-color: dodgerblue;
+}
+
+.cel{
+    height: 80px;
+    width: 80px;
+    border: 3px solid black;
+    border-radius: 30%;
+}
+
+.player1{
+    background-color: firebrick;
+}
+
+.player2{
+    background-color: gold;
+}
