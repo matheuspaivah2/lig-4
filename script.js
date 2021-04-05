@@ -1,14 +1,14 @@
-let tabuleiro = ['0,0,0,0,0,0,0',
-                 '0,0,0,0,0,0,0',
-                 '0,0,0,0,0,0,0',
-                 '0,0,0,0,0,0,0',
-                 '0,0,0,0,0,0,0',
-                 '0,0,0,0,0,0,0',
-            ]
+let tabuleiro = [
+                 [1,0,1,1,0,0,0],
+                 [0,1,1,0,0,0,0],
+                 [1,1,1,1,0,0,0],
+                 [1,0,0,1,0,0,0],
+                 [0,0,0,0,0,0,0],
+                 [0,0,0,0,0,0,0],
+                ]
 let amountPlayer1 = 0
 let amountPlayer2 = 0
 let amountMovie = 0
-
 
 //function start
 
@@ -30,6 +30,228 @@ let amountMovie = 0
 
 //verifica vitória
 
+console.log(tabuleiro);
+
+const vertical = (a, b) => {
+
+    let count = 1;
+
+    for (let i = 1; i <= 5; i++) {
+
+        if (a + i > 5) {
+
+            break;
+        }
+        if (tabuleiro[a + i][b] !== undefined) {
+
+            if (tabuleiro[a][b] === tabuleiro[a + i][b] ) {
+
+                count++;
+            }
+            else {
+
+                break;
+            }
+        }
+        
+    }
+    for (let i = 1; i <= 5; i++) {
+
+        if(a - i < 0){
+
+            break;
+        }
+        if (tabuleiro[a - i][b] !== undefined) {
+
+            if (tabuleiro[a][b] === tabuleiro[a - i][b] ) {
+
+                count++;
+            }
+            else {
+
+                break;
+            }
+        }
+        
+    }
+    console.log(count, "vertical");
+    return count;
+}
+const horizontal = (a, b) => {
+
+    let count = 1;
+
+    for (let i = 1; i <= 5; i++) {
+        if (b + i > 6) {
+            break;
+        }
+
+        if (tabuleiro[a][b + i] !== undefined) {
+
+            if (tabuleiro[a][b] === tabuleiro[a][b + i] ) {
+
+                count++;
+            }
+            else {
+
+                break;
+            }
+        }
+        
+    }
+    for (let i = 1; i <= 5; i++) {
+        if (b - i < 0) {
+            break;
+        }
+        if (tabuleiro[a][b - i] !== undefined) {
+
+            if (tabuleiro[a][b] === tabuleiro[a][b - i] ) {
+
+                count++;
+            }
+            else {
+
+                break;
+            }
+        }
+        
+    }
+    console.log(count, "horizontal");
+    return count;
+}
+const diagonal1 = (a, b) => {
+
+    let count = 1;
+    
+    for (let i = 1; i <= 5; i++) {
+
+        if (a + i > 5 || b + i > 6) {
+
+            break;
+        }
+        if (tabuleiro[a + i][b + i] !== undefined) {
+
+            if (tabuleiro[a][b] === tabuleiro[a + i][b + i] ) {
+
+                count++;
+            }
+            else {
+
+                break;
+            }
+        }
+        
+    }
+    
+    for (let i = 1; i <= 5; i++) {
+
+        if(a - i < 0 || b - i < 0){
+
+            break;
+        }
+        if (tabuleiro[a - i][b - i] !== undefined) {
+
+            if (tabuleiro[a][b] === tabuleiro[a - i][b - i] ) {
+
+                count++;
+            }
+            else {
+
+                break;
+            }
+        }
+        
+    }
+    console.log(count, "diagonal1");
+    return count;
+}
+const diagonal2 = (a, b) => {
+
+    let count = 1;
+    
+    for (let i = 1; i <= 5; i++) {
+
+        if (a + i > 5 || b - i < 0) {
+
+            break;
+        }
+        if (tabuleiro[a + i][b - i] !== undefined) {
+
+            if (tabuleiro[a][b] === tabuleiro[a + i][b - i] ) {
+
+                count++;
+            }
+            else {
+
+                break;
+            }
+        }
+        
+    }
+    
+    for (let i = 1; i <= 5; i++) {
+
+        if(a - i < 0 || b + i > 6){
+
+            break;
+        }
+        if (tabuleiro[a - i][b + i] !== undefined) {
+
+            if (tabuleiro[a][b] === tabuleiro[a - i][b + i] ) {
+
+                count++;
+            }
+            else {
+
+                break;
+            }
+        }
+        
+    }
+    console.log(count, "diagonal2");
+    return count;
+}
+
+const victory = (a ,b) => {
+
+    let count = 0;
+    count = horizontal(a, b);
+    if (count > 3 ) {
+        console.log('Victory');
+        return true;
+    }
+    else {
+        count = 0
+    }
+    count = vertical(a, b);
+    if (count > 3 ) {
+        console.log('Victory');
+        return true;
+    }
+    else {
+        count = 0
+    }
+    count = diagonal1(a, b);
+    if (count > 3 ) {
+        console.log('Victory');
+        return true;
+    }
+    else {
+        count = 0
+    }
+    count = diagonal2(a, b);
+    if (count > 3 ) {
+        console.log('Victory');
+        return true;
+    }
+    else {
+        count = 0
+    }
+
+    return false;
+
+    
+}
 
 //verifica vitória
 
