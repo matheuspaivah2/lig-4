@@ -287,7 +287,29 @@ div.figure {
 
 
 
-
+  div#draw {
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 400px;
+    z-index: 3;
+    top: 10%;
+    left: 3%;
+    border: 4px solid white;
+    background-color: #1b4863fc;
+    animation: neon 3s alternate infinite;
+  }
+  div#draw p {
+    animation: neon 3s alternate infinite;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: "Londrina Solid", cursive;
+  }
+  
 /* SELECT AVATAR */
 
 /* SELECT AVATAR */
