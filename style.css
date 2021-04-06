@@ -1,170 +1,205 @@
-html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+html,
+body,
+figure,
+div,
+input,
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
-body{
-    background-color: #292727;
-    font-family: 'Londrina Solid', cursive;
-    background-image: url('images/f2b81de7d19eb3d3dcea52ab5011d8fcf0f4c97a.jpg');
-    background-size: cover;
+body {
+  background-color: #292727;
+  font-family: "Londrina Solid", cursive;
+  background-image: url("images/f2b81de7d19eb3d3dcea52ab5011d8fcf0f4c97a.jpg");
+  background-size: cover;
 }
-#game{
-    width: 800px;
-    margin: 0 auto;
+#game {
+  width: 800px;
+  margin: 0 auto;
 }
-
-#box-tabuleiro{
-    width: 720px;
-    height: 520px;
-    margin: 0 auto;
-    border: 2px solid black;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    margin-top: 80px;
-    background-color: white;
-}
-
-#tabuleiro{
-    width: 700px;
-    height: 500px;
-    border: 3px solid black;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 0 auto;
-    background-color: #136596;
-}
-
-.line{
-    height: 498px;
-    width: 100px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    cursor: pointer;
+#black-blackground {
+  background-color: rgba(0, 0, 0, 0.705);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(#000, 0.4);
+  z-index: 2;
 }
 
-
-.cel{
-    height: 70px;
-    width: 70px;
-    border: 3px solid black;
-    border-radius: 30%;
-    background-color: white;
+#box-tabuleiro {
+  width: 720px;
+  height: 520px;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  background-color: white;
 }
 
-.player1{
-    background-color: firebrick;
+#tabuleiro {
+  width: 700px;
+  height: 500px;
+  border: 3px solid black;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+  background-color: #136596;
 }
 
-.player2{
-    background-color: gold;
+.line {
+  height: 498px;
+  width: 100px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
 }
 
-#controls-top{
-    display: flex;
-    justify-content: center;
-    column-gap: 50px;
-
-}
-#controls{
-    margin: 0 auto;
-    width: 800px;
-    height: 320px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-    row-gap: 50px;
-    align-items: center;
+.cel {
+  height: 70px;
+  width: 70px;
+  border: 3px solid black;
+  border-radius: 30%;
+  background-color: white;
 }
 
-.bt{
-    padding: 4px;
-    font-size: 70px;
-    font-weight: bolder;
-    border-radius: 8px;
-    border: 4px solid white;
-    height: 95px;
-    width: 310px;
-    background-color: #1b4863fc;
-    color: white;
-    font-family: 'Londrina Solid', cursive;
+.player1 {
+  background-color: firebrick;
 }
 
-#bt-playAgain{
-    width: 350px;
+.player2 {
+  background-color: gold;
 }
 
+#controls-top {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+}
+#controls {
+  margin: 0 auto;
+  width: 800px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  row-gap: 50px;
+  align-items: center;
+}
+
+.bt {
+  padding: 4px;
+  font-size: 70px;
+  font-weight: bolder;
+  border-radius: 8px;
+  border: 4px solid white;
+  height: 95px;
+  width: 310px;
+  background-color: #1b4863fc;
+  color: white;
+  font-family: "Londrina Solid", cursive;
+}
+
+#bt-playAgain {
+  width: 350px;
+}
 
 /* HEADER */
-#logo{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    border-radius: 12px;
-    border: 1px solid white;
-    background-color: #3e506b;
-
+#logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  border-radius: 12px;
+  border: 1px solid white;
+  background-color: #3e506b;
 }
 
-.logo-line{
-    width: 33.3px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid white;
-    align-items: center;
-    justify-content: space-evenly;
+.logo-line {
+  width: 33.3px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.logo-cel{
-    width: 25px;
-    height: 25px;
-    border: 1px solid white;
-    border-radius: 30%;
-    background-color: white;
+.logo-cel {
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 30%;
+  background-color: white;
 }
 
-#box-logo{
-    background-color: #1a4762;
-    width: 120px;
-    height: 160px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 2px solid white;
+#box-logo {
+  background-color: #1a4762;
+  width: 120px;
+  height: 160px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid white;
 }
 
-#title{
-    color: white;
-    font-size: 40px;
-    font-weight: bolder;
+#title {
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
 }
-
-
-
 
 /* footer */
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 8px;
-    
-
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
 }
 footer p {
-    color: white;
-    font-size: 30px;
-    text-align: center;
+  color: white;
+  font-size: 30px;
+  text-align: center;
 }
+#black-blackground {
+  background-color: rgba(0, 0, 0, 0.705);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(#000, 0.4);
+  z-index: 2;
+}
+.hidden {
+  display: none;
+}
+/* 
+div#victory {
+
+}
+ */
+
+ 
