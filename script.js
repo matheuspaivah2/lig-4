@@ -327,7 +327,6 @@ const checkTie = () => {
   console.log(tie);
   return tie;
 }
-checkTie();
 //verifica empate
 
 //reset

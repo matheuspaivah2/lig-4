@@ -11,24 +11,7 @@
 </head>
 <body>
 
-    <div  id='black-blackground'></div>
-    <div   id='victory'>
-        <div id="box-winner">
-            <div class='figure'> </div>
-            <div id="moldura-winner">
-                <figure id="fig-winner">
-                    <img src="" alt="" id="img-winner">
-                </figure>
-            </div>
-            
-            <p>Player <span> </span> is Winner</p>
-        </div>
-        <div id="box-buttons-winner">
-            <button class ='bt'id='bt-playAgain'>Play Again</button>
-            <button class ='bt'id='bt-end'>End</button>
-        </div>
-        
-    </div>
+    <div class="hidden" id='black-blackground'></div>
 
     
         <div class='hidden' id='choose-person'>
@@ -122,7 +105,33 @@
     <main>
 
         <section id="game">
-            
+            <div  class="hidden" id='victory'>
+                <div id="box-winner">
+                    <div class='figure'> </div>
+                    <div id="moldura-winner">
+                        <figure id="fig-winner">
+                            <img src="" alt="" id="img-winner">
+                        </figure>
+                    </div>
+                    
+                    <p>Player <span> </span> is Winner</p>
+                </div>
+                <div id="box-buttons-winner">
+                    <button class ='bt'id='bt-playAgain'>Play Again</button>
+                    <button class ='bt'id='bt-end'>End</button>
+                </div>
+                
+            </div>
+            <div   id='draw' class="hidden">
+                <div id="box-winner">
+                    <p>The Game Tied</p>
+                </div>
+                <div id="box-buttons-winner">
+                    <button class ='bt'id='bt-playAgain'>Play Again</button>
+                    <button class ='bt'id='bt-end'>End</button>
+                </div>
+                
+            </div>
             <div id="box-tabuleiro">
 
                 <div id="tabuleiro">
