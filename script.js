@@ -7,6 +7,10 @@ let tabuleiro = [
   [0, 0, 0, 0, 0, 0, 0],
 ];
 
+//
+let avatar = [1,2,3,4,5,6,7,8,9,10]
+
+//
 let amountPlayer1 = 0;
 let amountPlayer2 = 0;
 let amountMovie = 0;
@@ -56,6 +60,12 @@ collum7.addEventListener("click", function () {
 //function start
 
 //function start
+
+//choose person 
+
+
+//
+
 
 //function move
 function move(collumm) {
