@@ -312,7 +312,12 @@ const victory = (a, b) => {
 //verifica vitória
 
 //verifica empate
-
+const checkTie = () => {
+  let tie = !(tabuleiro[0].includes(0));
+  console.log(tie);
+  return tie;
+}
+checkTie();
 //verifica empate
 
 //reset
