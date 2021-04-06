@@ -183,7 +183,6 @@ footer p {
   font-size: 30px;
   text-align: center;
 }
-
 #black-blackground {
   background-color: rgba(0, 0, 0, 0.705);
   position: fixed;
@@ -194,7 +193,13 @@ footer p {
   background: rgba(#000, 0.4);
   z-index: 2;
 }
-
 .hidden {
   display: none;
 }
+/* 
+div#victory {
+
+}
+ */
+
+ 
