@@ -11,12 +11,12 @@
 </head>
 <body>
 
-    <div id='black-blackground'></div>
-    <div id='victory'>
+    <!-- <div id='black-blackground' class="hidden"></div>
+    <div id='victory' class="hidden">
 
         <button class ='bt hidden'id='bt-playAgain'>Play Again</button>
         <button class ='bt hidden'id='bt-end'>End</button>
-    </div>
+    </div> -->
 
 
     <header>
@@ -137,14 +137,33 @@
            
             </div>
 
+            <div id="status">
+
+                <div id="status-player1">
+                    <figure id="fig-avatar-player1">
+                        <img src="" alt="" id="img-avatar-player2">
+                    </figure>
+                    <label for="jogadas"></label>
+                    <span id="jogadas">0</span>
+                </div>
+
+                <div id="placar">
+                    <span id="placar-player1"></span>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <span id="placar-player2"></span>
+                </div>
+
+            </div>
 
             <div id="controls">
-                <div id="controls-top">
-                    <input type="button" value="RESET" id="bt-reset" class="bt">
-                    <input type="button" value="PLAY AGAIN" id="bt-playAgain" class="bt">
-                </div>
                 
-                <input type="button" value="START" id="bt-start" class="bt">
+                    <input type="button" value="RESET" id="bt-reset" class="bt">
+                    <input type="button" value="START" id="bt-start" class="bt">
+                
+                
+                
             </div>
         </section>
 
