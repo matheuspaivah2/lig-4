@@ -372,4 +372,111 @@ function changeDiv(p, position, collum) {
     return "";
   }
 }
+
+
 // changeDiv
+
+
+let avatar1 = document.getElementById('status-player1')
+let avatar2 = document.getElementById('status-player2')
+
+let imagem_do_pĺayer_1 = 0
+let imagem_do_pĺayer_2 = 0
+
+avatar1.addEventListener('click',function(){
+    let avatares = document.getElementById('choose-person')
+    let status = document.getElementById("status")
+
+    avatares.classList.remove("hidden")
+    avatares.classList.add("container-avatar")
+
+    status.classList.add("hidden")
+    imagem_do_pĺayer_1 = 1
+
+    console.log("aqui")
+})
+
+avatar2.addEventListener('click',function(){
+    let avatares = document.getElementById('choose-person')
+    let status = document.getElementById("status")
+
+    avatares.classList.remove("hidden")
+    avatares.classList.add("container-avatar")
+
+    status.classList.add("hidden")
+    imagem_do_pĺayer_2 = 2
+
+    console.log("aqui")
+})
+
+
+let img1 =  document.getElementById('avatar-1')
+img1.addEventListener("click",function(){
+    let img = img1
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+
+let img2 =  document.getElementById('avatar-2')
+img2.addEventListener("click",function(){
+    let img = img2
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+
+let img3 =  document.getElementById('avatar-3')
+img3.addEventListener("click",function(){
+    let img = img3
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+
+let img4 =  document.getElementById('avatar-4')
+img1.addEventListener("click",function(){
+    let img = img4
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+
+let img5 =  document.getElementById('avatar-5')
+img1.addEventListener("click",function(){
+    let img = img5
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+
+let img6 =  document.getElementById('avatar-6')
+img1.addEventListener("click",function(){
+    let img = img6
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+
+let img7 =  document.getElementById('avatar-7')
+img1.addEventListener("click",function(){
+    let img = img7
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+let img8 =  document.getElementById('avatar-8')
+img1.addEventListener("click",function(){
+    let img = img8
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+
+let img9 =  document.getElementById('avatar-9')
+img1.addEventListener("click",function(){
+    let img = img9
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+
+let img10 =  document.getElementById('avatar-10')
+img1.addEventListener("click",function(){
+    let img = img10
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+})
+ 
+
+function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
+    if( imagem_do_pĺayer_1 === 1 ) {
+        avatar1.src = img.src
+     }
+    if (imagem_do_pĺayer_2 === 2 ) {
+        avatar2.src = img.src
+    }
+}
+
+// changePic  
