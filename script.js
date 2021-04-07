@@ -510,16 +510,16 @@ function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
 //playAgain 
 
 
-let playAgain = document.getElementById("playAgain")
-playAgain.addEventListener("click", function () {
-    clear()
-})
+// let playAgain = document.getElementById("playAgain")
+// playAgain.addEventListener("click", function () {
+//     clear()
+// })
 
 
-function clear(){
+// function clear(){
     
-}
-// REGRAS DP JOGO 
+// }
+// REGRAS DO JOGO 
 
 let rules = document.getElementById("bt-regras");
 rules.addEventListener("click", function () {
@@ -532,4 +532,19 @@ closeRules.addEventListener("click", function () {
   divRules.classList.add("hidden");
 });
 
-// REGRAS DP JOGO
+// REGRAS DO JOGO
+
+//TUTORIAL
+
+let btTutorial = document.getElementById("bt-tutorial");
+btTutorial.addEventListener("click", function () {
+  let divTutorial = document.getElementById("tutorial");
+  divTutorial.classList.remove("hidden");
+});
+let closeTutorial = document.getElementById("bt-closeTutorial");
+closeTutorial.addEventListener("click", function () {
+  let divTutorial = document.getElementById("tutorial");
+  divTutorial.classList.add("hidden");
+});
+
+//TUTORIAL
