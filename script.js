@@ -10,6 +10,7 @@ let anterior1 = '';
 let anterior2 = '';
 //
 let player = 2;
+let point = [0,0]
 //
 let collum1 = document.getElementById("line1");
 collum1.addEventListener("click", function () {
@@ -68,6 +69,7 @@ function move(collumm) {
         tabuleiro[x][0] = player;
         if (victory(x,0) === true) {
             printWinner(player)
+            scorepoints(player)
         }
         if (checkTie() === true) {
           printTie();
@@ -86,6 +88,7 @@ function move(collumm) {
         tabuleiro[x][1] = player;
         if (victory(x, 1) === true) {
             printWinner(player)
+            scorepoints(player)
         }
         if (checkTie() === true) {
           printTie();
@@ -103,6 +106,7 @@ function move(collumm) {
         tabuleiro[x][2] = player;
         if (victory(x, 2) === true) {
             printWinner(player)
+            scorepoints(player)
         }
         if (checkTie() === true) {
           printTie();
@@ -120,6 +124,7 @@ function move(collumm) {
         tabuleiro[x][3] = player;
         if (victory(x, 3) === true) {
             printWinner(player)
+            scorepoints(player)
         }
         if (checkTie() === true) {
           printTie();
@@ -137,6 +142,7 @@ function move(collumm) {
         tabuleiro[x][4] = player;
         if (victory(x, 4) === true) {
             printWinner(player)
+            scorepoints(player)
         }
         if (checkTie() === true) {
           printTie();
@@ -154,6 +160,7 @@ function move(collumm) {
         tabuleiro[x][5] = player;
         if (victory(x, 5) === true) {
             printWinner(player)
+            scorepoints(player)
         }
         if (checkTie() === true) {
           printTie();
@@ -171,6 +178,7 @@ function move(collumm) {
         tabuleiro[x][6] = player;
         if (victory(x, 6) === true) {
             printWinner(player)
+            scorepoints(player)
         }
         if (checkTie() === true) {
           printTie();
@@ -354,8 +362,9 @@ const checkTie = () => {
 
 //verifica empate
 
-//clear tabuleiro
 
+//reset
+//clear tabuleiro
 const clearTabuleiro = () => {
   for (let i = 1; i <= 7; i++) {
     for (let j = 1; j <= 6; j++) {
@@ -376,7 +385,6 @@ const clearTabuleiro = () => {
 }
 
 //clear tabuleiro
-
 //play again
 
 const playAgain = document.getElementById('bt-playAgain');
@@ -408,7 +416,6 @@ function printWinner() {
     victory.classList.remove("hidden")
 
     let span = document.getElementById("span")
-    console.log(player)
     span.innerText = `${player}` 
 
     let img_winner = document.getElementById('moldura-winner')
@@ -632,3 +639,23 @@ closeTutorial.addEventListener("click", function () {
 });
 
 //TUTORIAL
+
+
+//scorepoints
+function scorepoints(player) {
+    if (player === 1 ){
+        point[0] += 1
+        let p1 = document.getElementById("placar-player1")
+        p1.innerText = `${point[0]}`  
+        return ''
+    }
+    if (player === 2) {
+        point[1] += 1
+        let p2 = document.getElementById("placar-player2")
+        p2.innerText = `${point[1]}`
+        return ''
+    }
+}
+
+
+//scorepoints 
