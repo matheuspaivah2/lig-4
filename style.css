@@ -67,6 +67,7 @@ body {
   align-items: flex-end;
   margin: 0 auto;
   background-color: #136596;
+  position: relative;
 }
 
 .line {
@@ -630,3 +631,15 @@ div#draw p {
   border-width: 2px;
 }
 /* DRAW */
+
+/* DISABLE */
+
+.disable {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  max-width: 515px;
+}
+
+/* DISABLE */
