@@ -13,13 +13,13 @@
 
     <div class='hidden'   id='black-blackground'></div>
     
-    <div class="hidden" id="gameRules">
+    <div  id="gameRules" class="hidden">
         <p>REGRAS</p>
         <ul>
-            <li>Jogo por rodada, ambos os players podem fazer 1 movimento por vez.</li>
-            <li>O player deve escolher uma torre para inserir sua peça durante seu turno.</li>
-            <li>Um player vence quando consegue 4 peças em sequência, em linha vertical, horizontal ou diagonal.</li>
-            <li>Um empate acontece quando nenhum dos players conseguem atingir uma condição de vitória e as peças do tabuleiro estão todas ocupadas.</li>
+            <li>° Jogo por rodada, ambos os players podem fazer 1 movimento por vez.</li>
+            <li>° O player deve escolher uma torre para inserir sua peça durante seu turno.</li>
+            <li>° Um player vence quando consegue 4 peças em sequência, em linha vertical, horizontal ou diagonal.</li>
+            <li>° Um empate acontece quando nenhum dos players conseguem atingir uma condição de vitória e as peças do tabuleiro estão todas ocupadas.</li>
         </ul>
 
         <button class="bt" id="bt-closeRules">FECHAR</button>
@@ -138,12 +138,22 @@
                 
             </div>
             <div   id='draw' class="hidden">
-                <div id="box-winner">
+                <div id="box-draw">
+                    <div id="draw-moldura-p1" class="moldura-draw">
+                        <figure id="draw-fig-p1" class="draw-fig">
+                            <img src="" alt="" id="draw-img-p1">
+                        </figure>
+                    </div>
                     <p>The Game Tied</p>
+                    <div id="draw-moldura-p2" class="moldura-draw">
+                        <figure id="draw-fig-p2" class="draw-fig">
+                            <img src="" alt="" id="draw-img-p2">
+                        </figure>
+                    </div>
                 </div>
-                <div id="box-buttons-winner">
-                    <button class ='bt'id='bt-playAgain'>Play Again</button>
-                    <button class ='bt'id='bt-end'>End</button>
+                <div id="box-buttons-draw">
+                    <button class ='bt'id='bt-playAgain-draw'>Play Again</button>
+                    <button class ='bt'id='bt-end-draw'>End</button>
                 </div>
                 
             </div>
