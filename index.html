@@ -12,28 +12,21 @@
 <body>
 
     <div class='hidden'   id='black-blackground'></div>
-    <div class='hidden'  id='victory'>
-        <div id="box-winner">
-            <div class='figure'> </div>
-            <div id="moldura-winner">
-                <figure id="fig-winner">
-                    <img src="" alt="" id="img-winner">
-                </figure>
-            </div>
-            
-            <p>Player <span id='span'> </span> is Winner</p>
-        </div>
-        <div id="box-buttons-winner">
-            <button class ='bt'id='bt-playAgain'>Play Again</button>
-            <button class ='bt'id='bt-end'>End</button>
-        </div>
-        
-    </div>
-    <div class="hidden" id='black-blackground'></div>
-
+    
     <div class="hidden" id="gameRules">
+        <p>REGRAS</p>
+        <ul>
+            <li>Jogo por rodada, ambos os players podem fazer 1 movimento por vez.</li>
+            <li>O player deve escolher uma torre para inserir sua peça durante seu turno.</li>
+            <li>Um player vence quando consegue 4 peças em sequência, em linha vertical, horizontal ou diagonal.</li>
+            <li>Um empate acontece quando nenhum dos players conseguem atingir uma condição de vitória e as peças do tabuleiro estão todas ocupadas.</li>
+        </ul>
 
         <button class="bt" id="bt-closeRules">FECHAR</button>
+    </div>
+    <div class="hidden" id="tutorial">
+
+        <button class="bt" id="bt-closeTutorial">FECHAR</button>
     </div>
 
     <div class='hidden' id='choose-person'>

@@ -71,6 +71,9 @@ function move(collumm) {
         if (victory(x,0) === true) {
             printWinner(player)
         }
+        if (checkTie() === true) {
+          printTie();
+        }
         console.log(tabuleiro);
         return "";
       }
@@ -86,6 +89,9 @@ function move(collumm) {
         if (victory(x, 1) === true) {
             printWinner(player)
         }
+        if (checkTie() === true) {
+          printTie();
+        }
         return "";
       }
     }
@@ -99,6 +105,9 @@ function move(collumm) {
         tabuleiro[x][2] = player;
         if (victory(x, 2) === true) {
             printWinner(player)
+        }
+        if (checkTie() === true) {
+          printTie();
         }
         return "";
       }
@@ -114,6 +123,9 @@ function move(collumm) {
         if (victory(x, 3) === true) {
             printWinner(player)
         }
+        if (checkTie() === true) {
+          printTie();
+        }
         return "";
       }
     }
@@ -127,6 +139,9 @@ function move(collumm) {
         tabuleiro[x][4] = player;
         if (victory(x, 4) === true) {
             printWinner(player)
+        }
+        if (checkTie() === true) {
+          printTie();
         }
         return "";
       }
@@ -142,6 +157,9 @@ function move(collumm) {
         if (victory(x, 5) === true) {
             printWinner(player)
         }
+        if (checkTie() === true) {
+          printTie();
+        }
         return "";
       }
     }
@@ -156,19 +174,18 @@ function move(collumm) {
         if (victory(x, 6) === true) {
             printWinner(player)
         }
+        if (checkTie() === true) {
+          printTie();
+        }
         return "";
       }
     }
   }
-  if (checkTie() === 'tie') {
-      printTie()
-  }
+  
 }
 //function move
 
 //verifica vitória
-
-console.log(tabuleiro);
 
 const vertical = (a, b) => {
   let count = 1;
@@ -348,7 +365,7 @@ const checkTie = () => {
 //play again
 
 //printWinner 
-function printWinner(player) {
+function printWinner() {
     console.log('aqui')
     let bg_back = document.getElementById("black-blackground")
     bg_back.classList.remove("hidden")
@@ -362,8 +379,9 @@ function printWinner(player) {
 //printWinner 
 
 //printTie 
-function prinTie(player) {
-    //busca id da tela Tie e retira classe hidden 
+function printTie(player) {
+  let tie = document.getElementById('draw');
+  tie.classList.remove('hidden');
 }
 //printTie 
 
@@ -543,4 +561,19 @@ closeRules.addEventListener("click", function () {
   divRules.classList.add("hidden");
 });
 
-// REGRAS DP JOGO
+// REGRAS DO JOGO
+
+//TUTORIAL
+
+let btTutorial = document.getElementById("bt-tutorial");
+btTutorial.addEventListener("click", function () {
+  let divTutorial = document.getElementById("tutorial");
+  divTutorial.classList.remove("hidden");
+});
+let closeTutorial = document.getElementById("bt-closeTutorial");
+closeTutorial.addEventListener("click", function () {
+  let divTutorial = document.getElementById("tutorial");
+  divTutorial.classList.add("hidden");
+});
+
+//TUTORIAL
