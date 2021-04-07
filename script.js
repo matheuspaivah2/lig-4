@@ -336,7 +336,7 @@ const checkTie = () => {
   console.log(tie);
   return tie;
 }
-checkTie();
+
 //verifica empate
 
 //reset
@@ -349,6 +349,13 @@ checkTie();
 
 //printWinner 
 function printWinner(player) {
+    console.log('aqui')
+    let bg_back = document.getElementById("black-blackground")
+    bg_back.classList.remove("hidden")
+
+    let victory = document.getElementById('victory')
+    victory.classList.remove("hidden")
+
     let span = document.getElementById("span")
     span.innerText = player
 }
@@ -504,3 +511,11 @@ function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
 
 
 let playAgain = document.getElementById("playAgain")
+playAgain.addEventListener("click", function () {
+    clear()
+})
+
+
+function clear(){
+    
+}
