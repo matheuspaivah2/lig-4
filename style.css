@@ -432,7 +432,7 @@ div#status-player2 {
   display: flex;
   /* background-image: url('images/saitama.png'); */
   background-size: cover;
-  background-color: #633a3a;
+  background-color: #631c1c;
 }
 #fig-placar{
   width: 50px;
@@ -517,7 +517,7 @@ div#gameRules {
     border-radius: 8px;
     background-color: #142b3afc;
     animation: neon 3s alternate infinite;
-    max-width: 415px;
+    max-width: 315px;
     align-items: center;
 
 }
@@ -527,17 +527,21 @@ div#gameRules p {
   color: white;
   font-size: 30px;
   font-family: "Londrina Solid", cursive;
+  margin-top: 5px;
 }
 div#gameRules ul {
   
   padding: 0 10px 10px 10px;
+  
 }
 div#gameRules li {
   padding-top: 5px;
   text-align: start;
   color: white;
-  font-size: 20px;
+  font-size: 19px;
   font-family: "Londrina Solid", cursive;
+  margin-bottom: 1px;
+  max-width: 250px;
 }
 div#gameRules button {
   margin: 0 auto;
