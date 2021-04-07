@@ -353,12 +353,48 @@ const checkTie = () => {
 
 //verifica empate
 
-//reset
+//clear tabuleiro
 
-//reset
+const clearTabuleiro = () => {
+  for (let i = 1; i <= 7; i++) {
+    for (let j = 1; j <= 6; j++) {
+      let id = `line${i}-cel${j}`;
+      let removeClass = document.getElementById(id);
+      removeClass.classList.remove('player1');
+      removeClass.classList.remove('player2');
+    }
+  }
+  tabuleiro = [
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+  ];
+}
+
+//clear tabuleiro
 
 //play again
 
+const playAgain = document.getElementById('bt-playAgain');
+playAgain.addEventListener("click", function () {
+  clearTabuleiro();
+  let addClass = document.getElementById('victory');
+  addClass.classList.add('hidden');
+  addClass = document.getElementById('black-blackground');
+  addClass.classList.add('hidden');
+});
+
+const playAgainDraw = document.getElementById('bt-playAgain-draw');
+playAgainDraw.addEventListener("click", function () {
+  clearTabuleiro();
+  let addClass = document.getElementById('draw');
+  addClass.classList.add('hidden');
+  addClass = document.getElementById('black-blackground');
+  addClass.classList.add('hidden');
+});
 //play again
 
 //printWinner 
