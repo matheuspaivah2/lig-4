@@ -705,3 +705,240 @@ div#final-screen p {
     margin-left: 0px;
   }
 }
+
+
+
+@media screen and (min-width: 768px) {
+  #game {
+  width: 530px;
+  height: 740px;
+   }
+  
+  #box-tabuleiro {
+    border: 5px solid white;
+    margin-top: 20px;
+  }
+
+#tabuleiro {
+  border: 2px solid black;
+}
+
+.line {
+  border: 1px solid black;
+}
+
+.cel {
+  border: 3px solid black;
+}
+.fig-avatar{
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+}
+#fig-placar{
+  width: 60px;
+  height: 60px;
+}
+.placar-value{
+  font-size: 46px;
+}
+.name-player{
+  font-size: 22px;
+  margin-top: 4px;
+}
+.bt{
+  
+  font-size: 40px;
+  
+  height: 55px;
+}
+#bt-start{
+  width: 200px;
+}
+#bt-reset{
+  width: 200px;
+}
+#status{
+  margin-top: 50px;
+}
+#controls{
+  column-gap: 20px;
+  width: 530px;
+  margin-top: 15px;
+}
+#bt-regras{
+  width: 150px;
+  height: 50px;
+  font-size: 36px;
+}
+#bt-tutorial{
+  font-size: 36px;
+  width: 150px;
+  height: 50px;
+}
+#box-menu{
+  column-gap: 20px;
+  
+}
+
+
+
+/* game rules */
+div#gameRules {
+  width: 70%;
+  height: 790px;
+  max-width: 538px;
+}
+div#gameRules p {
+
+font-size: 50px;
+
+margin-top: 5px;
+}
+div#gameRules ul {
+
+padding: 0 10px 10px 10px;
+
+}
+div#gameRules li {
+
+font-size: 35px;
+
+margin-bottom: 20px;
+max-width: 510px;
+}
+div#gameRules button {
+margin: 0 auto;
+}
+/* game rules */
+
+
+
+
+/* choose avatar */
+div.container-avatar {
+  
+  width: 70%;
+  height: 790px;
+  max-width: 538px;
+  
+}
+
+div.avatar {
+  cursor: pointer;
+  border: 3px solid white;
+  border-radius: 6px;
+  height: 138px;
+  width: 190px;
+}
+
+.choose-avatar{
+row-gap: 15px;
+}
+
+#choose-avatar{
+width: 100%;
+height: 790px
+
+}
+/* choose avatar */
+
+
+
+/* victory */
+div#victory {
+  max-width: 535px;
+}
+div#victory p {
+  font-size: 40px;
+}
+
+#bt-playAgain {
+  
+  font-size: 40px;
+  width: 65%;
+  height: 58px;
+  border: 2px solid white;
+  max-width: 270px;
+}
+#bt-end {
+  
+  font-size: 40px;
+  width: 55%;
+  height: 54px;
+  border: 2px solid white;
+  max-width: 230px;
+}
+#moldura-winner{
+  
+  height: 70%;
+  width: 75%;
+  border-radius: 8px;
+  border: 3px solid white;
+  max-width: 365px;
+}
+
+
+
+#box-winner{
+  width: 100%;
+  height: 65%;
+  margin-top: 10px;
+  row-gap: 20px;
+}
+
+#box-buttons-winner{
+  row-gap: 20px;
+  margin-top: 40px;
+}
+/* victory */
+
+
+
+/* draw */
+#box-draw{
+  width: 100%;
+  height: 75%;
+  margin-top: 20px;
+  row-gap: 20px;
+}
+
+#box-buttons-draw{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  margin-top: 15px;
+}
+div#draw {
+  max-width: 535px;
+}
+div#draw p {
+  font-size: 40px;
+}
+
+.moldura-draw{
+  background-color: black;
+  height: 40%;
+  width: 75%;
+  border-radius: 8px;
+  border: 2px solid white;
+  max-width: 340px;
+}
+#bt-playAgain-draw{
+  font-size: 34px;
+  width: 170px;
+  height: 50px;
+  border-width: 2px;
+}
+#bt-end-draw{
+  font-size: 34px;
+  width: 130px;
+  height: 46px;
+  border-width: 2px;
+}
+
+
+/* draw */
+}
