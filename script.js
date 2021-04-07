@@ -457,69 +457,56 @@ controlPlayer = 0
 
 let img = ''
 let img1 =  document.getElementsByClassName('avatar-1')[0]
-img1.addEventListener("click",function(){
-    img = img1
-    
+img1.addEventListener("click",function(){   
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-1')
 })
 
 let img2 =  document.getElementsByClassName('avatar-2')[0]
 img2.addEventListener("click",function(){
-    img = img2
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-2')
 })
 
 let img3 =  document.getElementsByClassName('avatar-3')[0]
 img3.addEventListener("click",function(){
-    img = img3
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-3')
 })
 
 let img4 =  document.getElementsByClassName('avatar-4')[0]
 img4.addEventListener("click",function(){
-    img = img4
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-4')
 })
 
 let img5 =  document.getElementsByClassName('avatar-5')[0]
 img5.addEventListener("click",function(){
-    img = img5
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-5')
 })
 
 let img6 =  document.getElementsByClassName('avatar-6')[0]
 img6.addEventListener("click",function(){
-    img = img6
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-6')
 })
 
 let img7 =  document.getElementsByClassName('avatar-7')[0]
 img7.addEventListener("click",function(){
-    img = img7
-    console.log(img7)
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-7')
 })
 let img8 =  document.getElementsByClassName('avatar-8')[0]
 img8.addEventListener("click",function(){
-    img = img8
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-8')
 })
 
 let img9 =  document.getElementsByClassName('avatar-9')[0]
 img9.addEventListener("click",function(){
-    img = img9
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-9')
 })
 
 let img10 =  document.getElementsByClassName('avatar-10')[0]
 img10.addEventListener("click",function(){
-    img = img10
-    
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-10')
 })
  
 
-function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,classImg) {
+function changePicture(imagem_do_pĺayer_1,imagem_do_pĺayer_2,classImg) {
     
     if( controlPlayer === 1 ) {
         
