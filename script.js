@@ -8,14 +8,11 @@ let tabuleiro = [
 ];
 
 //
-let avatar = [1,2,3,4,5,6,7,8,9,10]
-
-//
 let amountPlayer1 = 0;
 let amountPlayer2 = 0;
 let amountMovie = 0;
 let player = 2;
-
+//
 let collum1 = document.getElementById("line1");
 collum1.addEventListener("click", function () {
   let col = "line1";
@@ -61,14 +58,9 @@ collum7.addEventListener("click", function () {
 
 //function start
 
-//choose person 
-
-
-//
-
-
 //function move
 function move(collumm) {
+  
   if (collumm === "line1") {
     for (let x = 5; x >= 0; x--) {
       if (tabuleiro[x][0] === 0) {
@@ -76,7 +68,9 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][0] = player;
-        victory(x,0);
+        if (victory(x,0) === true) {
+            printWinner(player)
+        }
         console.log(tabuleiro);
         return "";
       }
@@ -89,7 +83,9 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][1] = player;
-        victory(x, 1);
+        if (victory(x, 1) === true) {
+            printWinner(player)
+        }
         return "";
       }
     }
@@ -101,7 +97,9 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][2] = player;
-        victory(x, 2);
+        if (victory(x, 2) === true) {
+            printWinner(player)
+        }
         return "";
       }
     }
@@ -113,7 +111,9 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][3] = player;
-        victory(x, 3);
+        if (victory(x, 3) === true) {
+            printWinner(player)
+        }
         return "";
       }
     }
@@ -125,7 +125,9 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][4] = player;
-        victory(x, 4);
+        if (victory(x, 4) === true) {
+            printWinner(player)
+        }
         return "";
       }
     }
@@ -137,7 +139,9 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][5] = player;
-        victory(x, 5);
+        if (victory(x, 5) === true) {
+            printWinner(player)
+        }
         return "";
       }
     }
@@ -149,10 +153,15 @@ function move(collumm) {
         let position = x;
         changeDiv(player, position, collumm);
         tabuleiro[x][6] = player;
-        victory(x, 6);
+        if (victory(x, 6) === true) {
+            printWinner(player)
+        }
         return "";
       }
     }
+  }
+  if (checkTie() === 'tie') {
+      printTie()
   }
 }
 //function move
@@ -327,6 +336,7 @@ const checkTie = () => {
   console.log(tie);
   return tie;
 }
+
 //verifica empate
 
 //reset
@@ -337,8 +347,28 @@ const checkTie = () => {
 
 //play again
 
-// switchPlayer
+//printWinner 
+function printWinner(player) {
+    console.log('aqui')
+    let bg_back = document.getElementById("black-blackground")
+    bg_back.classList.remove("hidden")
 
+    let victory = document.getElementById('victory')
+    victory.classList.remove("hidden")
+
+    let span = document.getElementById("span")
+    span.innerText = player
+}
+//printWinner 
+
+//printTie 
+function prinTie(player) {
+    //busca id da tela Tie e retira classe hidden 
+}
+//printTie 
+
+
+// switchPlayer
 function switchPlayer(player) {
   if (player === 2) {
     player = 1;
@@ -349,8 +379,6 @@ function switchPlayer(player) {
 }
 // switchPlayer
 
-function isWinner() {}
-
 //reset
 function reset() {
   window.location.reload();
@@ -360,12 +388,10 @@ function reset() {
 // changeDiv
 function changeDiv(p, position, collum) {
   let strId = collum + "-cel" + (position + 1);
-  console.log(strId);
   let div = document.getElementById(strId);
 
   if (p === 1) {
     div.classList.add("player1");
-
     return "";
   } else {
     div.classList.add("player2");
@@ -409,63 +435,63 @@ avatar2.addEventListener('click',function(){
     console.log("aqui")
 })
 
-
+let img = ''
 let img1 =  document.getElementById('avatar-1')
 img1.addEventListener("click",function(){
-    let img = img1
+    img = img1
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
 let img2 =  document.getElementById('avatar-2')
 img2.addEventListener("click",function(){
-    let img = img2
+    img = img2
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
 let img3 =  document.getElementById('avatar-3')
 img3.addEventListener("click",function(){
-    let img = img3
+    img = img3
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
 let img4 =  document.getElementById('avatar-4')
 img1.addEventListener("click",function(){
-    let img = img4
+    img = img4
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
 let img5 =  document.getElementById('avatar-5')
 img1.addEventListener("click",function(){
-    let img = img5
+    img = img5
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
 let img6 =  document.getElementById('avatar-6')
 img1.addEventListener("click",function(){
-    let img = img6
+    img = img6
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
 let img7 =  document.getElementById('avatar-7')
 img1.addEventListener("click",function(){
-    let img = img7
+    img = img7
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 let img8 =  document.getElementById('avatar-8')
 img1.addEventListener("click",function(){
-    let img = img8
+    img = img8
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
 let img9 =  document.getElementById('avatar-9')
 img1.addEventListener("click",function(){
-    let img = img9
+    img = img9
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
 let img10 =  document.getElementById('avatar-10')
 img1.addEventListener("click",function(){
-    let img = img10
+    img = img10
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
  
@@ -481,6 +507,18 @@ function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
 
 // changePic  
 
+//playAgain 
+
+
+let playAgain = document.getElementById("playAgain")
+playAgain.addEventListener("click", function () {
+    clear()
+})
+
+
+function clear(){
+    
+}
 // REGRAS DP JOGO 
 
 let rules = document.getElementById("bt-regras");
