@@ -447,7 +447,7 @@ div#status-player2 {
   border: 2px solid white;
   border-radius: 8px;
   display: flex;
-  background-image: url('images/saitama.png');
+  /* background-image: url('images/saitama.png'); */
   background-size: cover;
   background-color: #633a3a;
 }
@@ -470,9 +470,9 @@ div#status-player2 {
   object-fit: cover;
 }
 
-#fig-avatar-player2{
+/* #fig-avatar-player2{
   background-image: url('images/goku.jpg');
-}
+} */
 #placar{
   display: flex;
   align-items: center;

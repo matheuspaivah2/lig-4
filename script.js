@@ -428,17 +428,17 @@ let status = document.getElementById("status")
 
 let imagem_do_pĺayer_1 = 0
 let imagem_do_pĺayer_2 = 0
-
+let controlPlayer = 0
 avatar1.addEventListener('click',function(){
     avatares = document.getElementById('choose-person')
     status = document.getElementById("status")
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
-
+    controlPlayer = 1
     // status.classList.add("hidden")
     imagem_do_pĺayer_1 = 1
-
+    console.log(1)
     // console.log("aqui")
 })
 
@@ -448,10 +448,10 @@ avatar2.addEventListener('click',function(){
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
-
+controlPlayer = 0
     // status.classList.add("hidden")
     imagem_do_pĺayer_2 = 2
-
+    console.log(2)
     // console.log("aqui")
 })
 
@@ -460,89 +460,97 @@ let img1 =  document.getElementsByClassName('avatar-1')[0]
 img1.addEventListener("click",function(){
     img = img1
     
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-1')
 })
 
 let img2 =  document.getElementsByClassName('avatar-2')[0]
 img2.addEventListener("click",function(){
     img = img2
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-2')
 })
 
 let img3 =  document.getElementsByClassName('avatar-3')[0]
 img3.addEventListener("click",function(){
     img = img3
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-3')
 })
 
 let img4 =  document.getElementsByClassName('avatar-4')[0]
 img4.addEventListener("click",function(){
     img = img4
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-4')
 })
 
 let img5 =  document.getElementsByClassName('avatar-5')[0]
 img5.addEventListener("click",function(){
     img = img5
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-5')
 })
 
 let img6 =  document.getElementsByClassName('avatar-6')[0]
 img6.addEventListener("click",function(){
     img = img6
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-6')
 })
 
 let img7 =  document.getElementsByClassName('avatar-7')[0]
 img7.addEventListener("click",function(){
     img = img7
     console.log(img7)
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-7')
 })
 let img8 =  document.getElementsByClassName('avatar-8')[0]
 img8.addEventListener("click",function(){
     img = img8
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-8')
 })
 
 let img9 =  document.getElementsByClassName('avatar-9')[0]
 img9.addEventListener("click",function(){
     img = img9
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-9')
 })
 
 let img10 =  document.getElementsByClassName('avatar-10')[0]
 img10.addEventListener("click",function(){
     img = img10
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
+    
+    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-10')
 })
  
 
-function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
+function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,classImg) {
     
-    if( imagem_do_pĺayer_1 === 1 ) {
-
+    if( controlPlayer === 1 ) {
+        
         let a1 = document.getElementById('fig-avatar-player1')
-        a1.style.backgroundImage = ''
-        a1.classList.value = img.classList.value
+        a1.className = ""
+        a1.classList.add(`${classImg}`)
+        a1.classList.add(`fig-avatar`)
        
 
         avatares.classList.remove("container-avatar")
         avatares.classList.add("hidden")
-        img = ''
+        
+        imagem_do_pĺayer_1 = 0
+        console.log(imagem_do_pĺayer_1)
         return ''
         
      }
 
-    if (imagem_do_pĺayer_2 === 2 ) {
+    if (controlPlayer === 0 ) {
 
         let a2 = document.getElementById('fig-avatar-player2')
-        a2.classList.value = img.classList.value
-        a1.style.backgroundImage = ''
+        a2.className = ""
+        a2.classList.add(`${classImg}`)
+        a2.classList.add(`fig-avatar`)
+        
 
         avatares.classList.remove("container-avatar")
         avatares.classList.add("hidden")
-        img = ''
+        
+        imagem_do_pĺayer_2 = 0
+        console.log(imagem_do_pĺayer_2)
         return ''
     }
     
