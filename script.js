@@ -6,7 +6,8 @@ let tabuleiro = [
   [0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0],
 ];
-
+let anterior1 = '';
+let anterior2 = '';
 //
 let player = 2;
 let point = [0,0]
@@ -556,9 +557,14 @@ img10.addEventListener("click",function(){
  
 
 function changePicture(classImg) {
-    
+    let disableAvatar = document.getElementsByClassName(`${classImg}`);
+  
     if( controlPlayer === 1 ) {
-        
+        if (anterior1 !== '') {
+          let enableAvatar = document.getElementsByClassName(anterior1);
+          enableAvatar[0].classList.add('avatar');
+        }
+        anterior1 = classImg;
         let a1 = document.getElementById('fig-avatar-player1')
         a1.className = ""
         a1.classList.add(`${classImg}`)
@@ -568,13 +574,18 @@ function changePicture(classImg) {
         avatares.classList.remove("container-avatar")
         avatares.classList.add("hidden")
         
+        disableAvatar[0].classList.remove('avatar');
         imagem_do_pĺayer_1 = 0
         return ''
         
      }
 
     if (controlPlayer === 0 ) {
-
+        if (anterior2 !== '') {
+          let enableAvatar = document.getElementsByClassName(anterior2);
+         enableAvatar[0].classList.add('avatar');
+        }
+        anterior2 = `${classImg}`
         let a2 = document.getElementById('fig-avatar-player2')
         a2.className = ""
         a2.classList.add(`${classImg}`)
@@ -584,6 +595,7 @@ function changePicture(classImg) {
         avatares.classList.remove("container-avatar")
         avatares.classList.add("hidden")
         
+        disableAvatar[0].classList.remove('avatar');
         imagem_do_pĺayer_2 = 0
         return ''
     }
@@ -596,11 +608,15 @@ let rules = document.getElementById("bt-regras");
 rules.addEventListener("click", function () {
   let divRules = document.getElementById("gameRules");
   divRules.classList.remove("hidden");
+  let blackBlackground = document.getElementById("black-blackground");
+  blackBlackground.classList.remove('hidden');
 });
 let closeRules = document.getElementById("bt-closeRules");
 closeRules.addEventListener("click", function () {
   let divRules = document.getElementById("gameRules");
   divRules.classList.add("hidden");
+  let blackBlackground = document.getElementById("black-blackground");
+  blackBlackground.classList.add('hidden');
 });
 
 // REGRAS DO JOGO
@@ -611,11 +627,15 @@ let btTutorial = document.getElementById("bt-tutorial");
 btTutorial.addEventListener("click", function () {
   let divTutorial = document.getElementById("tutorial");
   divTutorial.classList.remove("hidden");
+  let blackBlackground = document.getElementById("black-blackground");
+  blackBlackground.classList.remove('hidden');
 });
 let closeTutorial = document.getElementById("bt-closeTutorial");
 closeTutorial.addEventListener("click", function () {
   let divTutorial = document.getElementById("tutorial");
   divTutorial.classList.add("hidden");
+  let blackBlackground = document.getElementById("black-blackground");
+  blackBlackground.classList.add('hidden');
 });
 
 //TUTORIAL
