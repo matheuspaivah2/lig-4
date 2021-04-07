@@ -8,9 +8,6 @@ let tabuleiro = [
 ];
 
 //
-let amountPlayer1 = 0;
-let amountPlayer2 = 0;
-let amountMovie = 0;
 let player = 2;
 //
 let collum1 = document.getElementById("line1");
@@ -366,7 +363,7 @@ const checkTie = () => {
 
 //printWinner 
 function printWinner() {
-    console.log('aqui')
+    
     let bg_back = document.getElementById("black-blackground")
     bg_back.classList.remove("hidden")
 
@@ -374,7 +371,27 @@ function printWinner() {
     victory.classList.remove("hidden")
 
     let span = document.getElementById("span")
-    span.innerText = player
+    console.log(player)
+    span.innerText = `${player}` 
+
+    let img_winner = document.getElementById('moldura-winner')
+    if ( player === 1 ) {
+
+        let win = document.getElementById('fig-avatar-player1')
+        let temp = win.className.split(' ')
+        let newC = temp[0]
+        img_winner.classList.add(`${newC}`)
+       
+
+    }
+    if ( player === 2 ) {
+        let win = document.getElementById('fig-avatar-player2')
+        let temp = win.className.split(' ')
+        let newC = temp[0]
+        img_winner.classList.add(`${newC}`)
+        
+
+    }
 }
 //printWinner 
 
@@ -425,10 +442,8 @@ let avatar1 = document.getElementById('status-player1')
 let avatar2 = document.getElementById('status-player2')
 let avatares = document.getElementById('choose-person')
 let status = document.getElementById("status")
-
-let imagem_do_pĺayer_1 = 0
-let imagem_do_pĺayer_2 = 0
 let controlPlayer = 0
+
 avatar1.addEventListener('click',function(){
     avatares = document.getElementById('choose-person')
     status = document.getElementById("status")
@@ -436,10 +451,6 @@ avatar1.addEventListener('click',function(){
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
     controlPlayer = 1
-    // status.classList.add("hidden")
-    imagem_do_pĺayer_1 = 1
-    console.log(1)
-    // console.log("aqui")
 })
 
 avatar2.addEventListener('click',function(){
@@ -448,65 +459,62 @@ avatar2.addEventListener('click',function(){
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
-controlPlayer = 0
-    // status.classList.add("hidden")
-    imagem_do_pĺayer_2 = 2
-    console.log(2)
-    // console.log("aqui")
+    controlPlayer = 0
+
 })
 
 let img = ''
 let img1 =  document.getElementsByClassName('avatar-1')[0]
 img1.addEventListener("click",function(){   
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-1')
+    changePicture('avatar-1')
 })
 
 let img2 =  document.getElementsByClassName('avatar-2')[0]
 img2.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-2')
+    changePicture('avatar-2')
 })
 
 let img3 =  document.getElementsByClassName('avatar-3')[0]
 img3.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-3')
+    changePicture('avatar-3')
 })
 
 let img4 =  document.getElementsByClassName('avatar-4')[0]
 img4.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-4')
+    changePicture('avatar-4')
 })
 
 let img5 =  document.getElementsByClassName('avatar-5')[0]
 img5.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-5')
+    changePicture('avatar-5')
 })
 
 let img6 =  document.getElementsByClassName('avatar-6')[0]
 img6.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-6')
+    changePicture('avatar-6')
 })
 
 let img7 =  document.getElementsByClassName('avatar-7')[0]
 img7.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-7')
+    changePicture('avatar-7')
 })
 let img8 =  document.getElementsByClassName('avatar-8')[0]
 img8.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-8')
+    changePicture('avatar-8')
 })
 
 let img9 =  document.getElementsByClassName('avatar-9')[0]
 img9.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-9')
+    changePicture('avatar-9')
 })
 
 let img10 =  document.getElementsByClassName('avatar-10')[0]
 img10.addEventListener("click",function(){
-    changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2,'avatar-10')
+    changePicture('avatar-10')
 })
  
 
-function changePicture(imagem_do_pĺayer_1,imagem_do_pĺayer_2,classImg) {
+function changePicture(classImg) {
     
     if( controlPlayer === 1 ) {
         
@@ -520,7 +528,6 @@ function changePicture(imagem_do_pĺayer_1,imagem_do_pĺayer_2,classImg) {
         avatares.classList.add("hidden")
         
         imagem_do_pĺayer_1 = 0
-        console.log(imagem_do_pĺayer_1)
         return ''
         
      }
@@ -537,7 +544,6 @@ function changePicture(imagem_do_pĺayer_1,imagem_do_pĺayer_2,classImg) {
         avatares.classList.add("hidden")
         
         imagem_do_pĺayer_2 = 0
-        console.log(imagem_do_pĺayer_2)
         return ''
     }
     
