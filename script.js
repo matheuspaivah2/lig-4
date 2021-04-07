@@ -518,6 +518,8 @@ img10.addEventListener("click",function(){
 })
  
 
+
+
 function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
     
     if( imagem_do_pĺayer_1 === 1 ) {
@@ -530,6 +532,7 @@ function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
         avatares.classList.remove("container-avatar")
         avatares.classList.add("hidden")
         img = ''
+        imagem_do_pĺayer_1 = 0 
         return ''
         
      }
@@ -543,6 +546,7 @@ function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
         avatares.classList.remove("container-avatar")
         avatares.classList.add("hidden")
         img = ''
+        imagem_do_pĺayer_2 = 0 
         return ''
     }
     
