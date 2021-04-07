@@ -356,43 +356,43 @@ div.avatar {
   
  }
 
- #avatar-1{
+ .avatar-1{
    background-image: url('images/levi.jpg');
    background-size: cover;
  }
- #avatar-2{
+ .avatar-2{
   background-image: url('images/goku.jpg');
   background-size: cover;
 }
-#avatar-3{
+.avatar-3{
   background-image: url('images/saitama.png');
   background-size: cover;
 }
-#avatar-4{
+.avatar-4{
   background-image: url('images/godizilla1.jpg');
   background-size: cover;
 }
-#avatar-5{
+.avatar-5{
   background-image: url('images/rick.jpg');
   background-size: cover;
 }
-#avatar-6{
+.avatar-6{
   background-image: url('images/bojack.jpg');
   background-size: cover;
 }
-#avatar-7{
+.avatar-7{
   background-image: url('images/borat.jpg');
   background-size: cover;
 }
-#avatar-8{
+.avatar-8{
   background-image: url('images/lulamolusco.jpg');
   background-size: cover;
 }
-#avatar-9{
+.avatar-9{
   background-image: url('images/snoop.jpg');
   background-size: cover;
 }
-#avatar-10{
+.avatar-10{
   background-image: url('images/chopper.png');
   background-size: cover;
 }

@@ -423,122 +423,133 @@ function changeDiv(p, position, collum) {
 
 let avatar1 = document.getElementById('status-player1')
 let avatar2 = document.getElementById('status-player2')
+let avatares = document.getElementById('choose-person')
+let status = document.getElementById("status")
 
 let imagem_do_pĺayer_1 = 0
 let imagem_do_pĺayer_2 = 0
 
 avatar1.addEventListener('click',function(){
-    let avatares = document.getElementById('choose-person')
-    let status = document.getElementById("status")
+    avatares = document.getElementById('choose-person')
+    status = document.getElementById("status")
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
 
-    status.classList.add("hidden")
+    // status.classList.add("hidden")
     imagem_do_pĺayer_1 = 1
 
-    console.log("aqui")
+    // console.log("aqui")
 })
 
 avatar2.addEventListener('click',function(){
-    let avatares = document.getElementById('choose-person')
-    let status = document.getElementById("status")
+    avatares = document.getElementById('choose-person')
+    status = document.getElementById("status")
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
 
-    status.classList.add("hidden")
+    // status.classList.add("hidden")
     imagem_do_pĺayer_2 = 2
 
-    console.log("aqui")
+    // console.log("aqui")
 })
 
 let img = ''
-let img1 =  document.getElementById('avatar-1')
+let img1 =  document.getElementsByClassName('avatar-1')[0]
 img1.addEventListener("click",function(){
     img = img1
+    
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
-let img2 =  document.getElementById('avatar-2')
+let img2 =  document.getElementsByClassName('avatar-2')[0]
 img2.addEventListener("click",function(){
     img = img2
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
-let img3 =  document.getElementById('avatar-3')
+let img3 =  document.getElementsByClassName('avatar-3')[0]
 img3.addEventListener("click",function(){
     img = img3
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
-let img4 =  document.getElementById('avatar-4')
-img1.addEventListener("click",function(){
+let img4 =  document.getElementsByClassName('avatar-4')[0]
+img4.addEventListener("click",function(){
     img = img4
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
-let img5 =  document.getElementById('avatar-5')
-img1.addEventListener("click",function(){
+let img5 =  document.getElementsByClassName('avatar-5')[0]
+img5.addEventListener("click",function(){
     img = img5
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
-let img6 =  document.getElementById('avatar-6')
-img1.addEventListener("click",function(){
+let img6 =  document.getElementsByClassName('avatar-6')[0]
+img6.addEventListener("click",function(){
     img = img6
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
-let img7 =  document.getElementById('avatar-7')
-img1.addEventListener("click",function(){
+let img7 =  document.getElementsByClassName('avatar-7')[0]
+img7.addEventListener("click",function(){
     img = img7
+    console.log(img7)
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
-let img8 =  document.getElementById('avatar-8')
-img1.addEventListener("click",function(){
+let img8 =  document.getElementsByClassName('avatar-8')[0]
+img8.addEventListener("click",function(){
     img = img8
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
-let img9 =  document.getElementById('avatar-9')
-img1.addEventListener("click",function(){
+let img9 =  document.getElementsByClassName('avatar-9')[0]
+img9.addEventListener("click",function(){
     img = img9
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
 
-let img10 =  document.getElementById('avatar-10')
-img1.addEventListener("click",function(){
+let img10 =  document.getElementsByClassName('avatar-10')[0]
+img10.addEventListener("click",function(){
     img = img10
     changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2)
 })
  
 
 function changePicture(img,imagem_do_pĺayer_1,imagem_do_pĺayer_2) {
+    
     if( imagem_do_pĺayer_1 === 1 ) {
-        avatar1.src = img.src
+
+        let a1 = document.getElementById('fig-avatar-player1')
+        a1.style.backgroundImage = ''
+        a1.classList.value = img.classList.value
+       
+
+        avatares.classList.remove("container-avatar")
+        avatares.classList.add("hidden")
+        img = ''
+        return ''
+        
      }
+
     if (imagem_do_pĺayer_2 === 2 ) {
-        avatar2.src = img.src
+
+        let a2 = document.getElementById('fig-avatar-player2')
+        a2.classList.value = img.classList.value
+        a1.style.backgroundImage = ''
+
+        avatares.classList.remove("container-avatar")
+        avatares.classList.add("hidden")
+        img = ''
+        return ''
     }
-}
-
-// changePic  
-
-//playAgain 
-
-
-let playAgain = document.getElementById("bt-playAgain")
-playAgain.addEventListener("click", function () {
-    clear();
-})
-
-
-function clear(){
     
 }
-// REGRAS DO JOGO 
+// changePic  
 
+// REGRAS DP JOGO 
 let rules = document.getElementById("bt-regras");
 rules.addEventListener("click", function () {
   let divRules = document.getElementById("gameRules");
