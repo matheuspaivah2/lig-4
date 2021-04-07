@@ -381,8 +381,6 @@ function printWinner() {
         let temp = win.className.split(' ')
         let newC = temp[0]
         img_winner.classList.add(`${newC}`)
-       
-
     }
     if ( player === 2 ) {
         let win = document.getElementById('fig-avatar-player2')
