@@ -519,3 +519,17 @@ playAgain.addEventListener("click", function () {
 function clear(){
     
 }
+// REGRAS DP JOGO 
+
+let rules = document.getElementById("bt-regras");
+rules.addEventListener("click", function () {
+  let divRules = document.getElementById("gameRules");
+  divRules.classList.remove("hidden");
+});
+let closeRules = document.getElementById("bt-closeRules");
+closeRules.addEventListener("click", function () {
+  let divRules = document.getElementById("gameRules");
+  divRules.classList.add("hidden");
+});
+
+// REGRAS DP JOGO
