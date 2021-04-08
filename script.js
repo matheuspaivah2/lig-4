@@ -845,6 +845,20 @@ btReset.addEventListener('click', ()=>{
 
 //button reset
 
+
+//bt end tela empate
+
+const btEndEmpate = document.getElementById('bt-end-draw')
+btEndEmpate.addEventListener('click', ()=>{
+  const telaEmpate = document.getElementById('draw')
+  telaEmpate.classList.add('hidden')
+
+  resultadoFinal(point)
+
+})
+
+
+//bt end tela empate
 //PLAYSONG
 
 function songs() {
