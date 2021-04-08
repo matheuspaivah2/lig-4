@@ -512,50 +512,90 @@ let img = ''
 let img1 =  document.getElementsByClassName('avatar-1')[0]
 img1.addEventListener("click",function(){   
     changePicture('avatar-1')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img2 =  document.getElementsByClassName('avatar-2')[0]
 img2.addEventListener("click",function(){
     changePicture('avatar-2')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img3 =  document.getElementsByClassName('avatar-3')[0]
 img3.addEventListener("click",function(){
     changePicture('avatar-3')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img4 =  document.getElementsByClassName('avatar-4')[0]
 img4.addEventListener("click",function(){
     changePicture('avatar-4')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img5 =  document.getElementsByClassName('avatar-5')[0]
 img5.addEventListener("click",function(){
     changePicture('avatar-5')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img6 =  document.getElementsByClassName('avatar-6')[0]
 img6.addEventListener("click",function(){
     changePicture('avatar-6')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img7 =  document.getElementsByClassName('avatar-7')[0]
 img7.addEventListener("click",function(){
     changePicture('avatar-7')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 let img8 =  document.getElementsByClassName('avatar-8')[0]
 img8.addEventListener("click",function(){
     changePicture('avatar-8')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img9 =  document.getElementsByClassName('avatar-9')[0]
 img9.addEventListener("click",function(){
     changePicture('avatar-9')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img10 =  document.getElementsByClassName('avatar-10')[0]
 img10.addEventListener("click",function(){
     changePicture('avatar-10')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
  
 
@@ -664,3 +704,9 @@ function scorepoints(player) {
 
 
 //scorepoints 
+
+// START 
+const startGame = () => {
+  
+}
+// START 
