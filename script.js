@@ -372,6 +372,16 @@ const clearTabuleiro = () => {
       let removeClass = document.getElementById(id);
       removeClass.classList.remove('player1');
       removeClass.classList.remove('player2');
+      removeClass.classList.remove('avatar-1');
+      removeClass.classList.remove('avatar-2');
+      removeClass.classList.remove('avatar-3');
+      removeClass.classList.remove('avatar-4');
+      removeClass.classList.remove('avatar-5');
+      removeClass.classList.remove('avatar-6');
+      removeClass.classList.remove('avatar-7');
+      removeClass.classList.remove('avatar-8');
+      removeClass.classList.remove('avatar-9');
+      removeClass.classList.remove('avatar-10');
     }
   }
   tabuleiro = [
@@ -382,6 +392,7 @@ const clearTabuleiro = () => {
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
   ];
+  return tabuleiro;
 }
 
 //clear tabuleiro
@@ -461,6 +472,17 @@ function reset() {
   window.location.reload();
 }
 //reset
+let changePic = true;
+// START 
+const startGame = document.getElementById('bt-start');
+startGame.addEventListener("click", function () {
+  let enableTabuleiro = document.getElementsByClassName('disable');
+  enableTabuleiro[0].classList.add('hidden');
+  
+  changePic = false;
+  
+});
+// START
 
 // changeDiv
 function changeDiv(p, position, collum) {
@@ -479,9 +501,10 @@ function changeDiv(p, position, collum) {
       return "";
     }
 }
-
+ 
 // changeDiv
 
+// changePic
 
 let avatar1 = document.getElementById('status-player1')
 let avatar2 = document.getElementById('status-player2')
@@ -489,24 +512,35 @@ let avatares = document.getElementById('choose-person')
 let status = document.getElementById("status")
 let controlPlayer = 0
 
+
+
 avatar1.addEventListener('click',function(){
+  if (changePic === true) {
     avatares = document.getElementById('choose-person')
     status = document.getElementById("status")
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
     controlPlayer = 1
-})
+    let classNeon = document.getElementById('fig-avatar-player1');
+    classNeon.classList.remove('neon');
+  }
+});
 
 avatar2.addEventListener('click',function(){
+  if (changePic === true) {
     avatares = document.getElementById('choose-person')
     status = document.getElementById("status")
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
     controlPlayer = 0
+    let classNeon = document.getElementById('fig-avatar-player2');
+    classNeon.classList.remove('neon');
+  }
 
 })
+
 
 let img = ''
 let img1 =  document.getElementsByClassName('avatar-1')[0]
@@ -704,9 +738,3 @@ function scorepoints(player) {
 
 
 //scorepoints 
-
-// START 
-const startGame = () => {
-  
-}
-// START 

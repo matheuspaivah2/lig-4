@@ -479,6 +479,9 @@ div#status-player2 {
   flex-direction: column;
   align-items: center;
 }
+div.neon {
+  animation: neon 2s alternate infinite;
+}
 /* STATUS */
 
 /* HEADER */
