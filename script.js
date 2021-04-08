@@ -376,6 +376,7 @@ const clearTabuleiro = () => {
       removeClass.classList.remove('avatar-8');
       removeClass.classList.remove('avatar-9');
       removeClass.classList.remove('avatar-10');
+      removeClass.classList.remove('transition');
     }
   }
   tabuleiro = [
