@@ -745,6 +745,22 @@ function scorepoints(player) {
 
 //scorepoints 
 
+// cursor 
+let mouse = document.querySelector('.mouse');
+
+document.addEventListener('mousemove', event => {
+    mouse.setAttribute("style", "top: "+(event.pageY - 10)+"px; left: "+(event.pageX - 10)+"px;")
+})
+
+document.addEventListener('click', () => {
+    mouse.classList.add("expand");
+
+    setTimeout(() => {
+        mouse.classList.remove("expand");
+    }, 500)
+})
+
+//
 
 // TELA FINAL
 
