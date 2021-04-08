@@ -410,13 +410,6 @@ div#status-player2 {
 
 /* SELECT AVATAR */
 
-
-
-
-
-
-
-
 /* STATUS */
 #status{
   display: flex;
@@ -481,7 +474,7 @@ div#status-player2 {
   flex-direction: column;
   align-items: center;
 }
-div.neon {
+.neon {
   animation: neon 2s alternate infinite;
 }
 /* STATUS */
@@ -774,6 +767,11 @@ div#final-screen p {
 /* final screen */
 
 
+/*JOGADOR DA VEZ*/
+.pulsar{ 
+  animation: cursorAnim 0.75s infinite alternate;
+}
+/*JOGADOR DA VEZ*/
 
 @media screen and (min-width: 420px) {
   #menu{
@@ -1179,3 +1177,4 @@ div .transition {
   }
 
 /*/
+
