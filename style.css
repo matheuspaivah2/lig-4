@@ -1117,12 +1117,12 @@ div#tutorial {
 /* cursor */
 
 .mouse {
-    z-index: 4;
+    z-index: 3;
     width: 40px;
     height: 40px;
     border: 1px solid white;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
@@ -1131,9 +1131,9 @@ div#tutorial {
 
 .mouse::after {
     content: "";
-    width: 20px;
+     width: 20px;
     height: 20px;
-    position: absolute;
+    position: absolute; 
     border: 8px solid gray;
     border-radius: 50%;
     opacity: .5;
@@ -1176,15 +1176,6 @@ div#tutorial {
 .expand {
     animation: cursorAnim3 .5s forwards;
     border: 1px solid red;
-}
-
-p {
-  color: white;
-  font-family: 'arial';
-  text-align: center;
-  margin-top: 50px;
-  font-size: 1.4em;
-  
 }
   a {
     color: teal;
