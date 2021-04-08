@@ -78,7 +78,6 @@ function move(collumm) {
         if (checkTie() === true) {
           printTie();
         }
-        console.log(tabuleiro);
         return "";
       }
     }
@@ -224,7 +223,6 @@ const vertical = (a, b) => {
       }
     }
   }
-  console.log(count, "vertical");
   return count;
 };
 const horizontal = (a, b) => {
@@ -255,7 +253,6 @@ const horizontal = (a, b) => {
       }
     }
   }
-  console.log(count, "horizontal");
   return count;
 };
 const diagonal1 = (a, b) => {
@@ -286,7 +283,6 @@ const diagonal1 = (a, b) => {
       }
     }
   }
-  console.log(count, "diagonal1");
   return count;
 };
 const diagonal2 = (a, b) => {
@@ -317,7 +313,6 @@ const diagonal2 = (a, b) => {
       }
     }
   }
-  console.log(count, "diagonal2");
   return count;
 };
 
@@ -325,28 +320,24 @@ const victory = (a, b) => {
   let count = 0;
   count = horizontal(a, b);
   if (count > 3) {
-    console.log("Victory");
     return true;
   } else {
     count = 0;
   }
   count = vertical(a, b);
   if (count > 3) {
-    console.log("Victory");
     return true;
   } else {
     count = 0;
   }
   count = diagonal1(a, b);
   if (count > 3) {
-    console.log("Victory");
     return true;
   } else {
     count = 0;
   }
   count = diagonal2(a, b);
   if (count > 3) {
-    console.log("Victory");
     return true;
   } else {
     count = 0;
@@ -360,7 +351,6 @@ const victory = (a, b) => {
 //verifica empate
 const checkTie = () => {
   let tie = !(tabuleiro[0].includes(0));
-  console.log(tie);
   return tie;
 }
 
@@ -452,12 +442,7 @@ function printWinner() {
 }
 //printWinner 
 
-//printTie 
-function printTie(player) {
-  let tie = document.getElementById('draw');
-  tie.classList.remove('hidden');
-}
-//printTie 
+
 
 
 // switchPlayer
@@ -687,6 +672,18 @@ function changePicture(classImg) {
     
 }
 // changePic  
+
+//printTie 
+function printTie() {
+  const imgDrawP1 = document.getElementById('draw-moldura-p1');
+  const imgDrawP2 = document.getElementById('draw-moldura-p2');
+  let tie = document.getElementById('draw');
+  tie.classList.remove('hidden');
+  imgDrawP1.classList.add(`${imgplayer[0]}`);
+  imgDrawP2.classList.add(`${imgplayer[1]}`);
+  
+}
+//printTie 
 
 // REGRAS DP JOGO 
 let rules = document.getElementById("bt-regras");
