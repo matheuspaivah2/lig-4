@@ -12,6 +12,10 @@ let anterior2 = '';
 let player = 2;
 let point = [0,0]
 //
+//imgplayer
+let imgplayer = [0,1]
+//imgplayer
+
 let collum1 = document.getElementById("line1");
 collum1.addEventListener("click", function () {
   let col = "line1";
@@ -654,6 +658,7 @@ function changePicture(classImg) {
         
         disableAvatar[0].classList.remove('avatar');
         imagem_do_pĺayer_1 = 0
+        imgplayer[0] = classImg
         return ''
         
      }
@@ -676,6 +681,7 @@ function changePicture(classImg) {
         
         disableAvatar[0].classList.remove('avatar');
         imagem_do_pĺayer_2 = 0
+        imgplayer[1] = classImg
         return ''
     }
     
@@ -738,3 +744,62 @@ function scorepoints(player) {
 
 
 //scorepoints 
+
+
+// TELA FINAL
+
+
+
+const resultadoFinal = (pontos) =>{
+  const imgP1 = document.getElementById('moldura-final-p1')
+  const imgP2 = document.getElementById('moldura-final-p2')
+  const txtEmpate = document.getElementById('final-text')
+  const nameWinner = document.getElementById('player-winner')
+  const pontosP1 = document.getElementById('placar-final-player1')
+  const pontosP2 = document.getElementById('placar-final-player2')
+  const telaFinal = document.getElementById('final-screen')
+  
+  telaFinal.classList.remove('hidden')
+
+  
+
+  imgP1.classList.add(`${imgplayer[0]}`);
+
+  
+  imgP2.classList.add(`${imgplayer[1]}`);
+
+  pontosP1.textContent = `${pontos[0]}`
+  pontosP2.textContent = `${pontos[1]}`
+
+  if(pontos[0] > pontos[1]){
+    nameWinner.textContent = '1'
+  }
+  if(pontos[0] < pontos[1]){
+    nameWinner.textContent = '2'
+  }
+  if(pontos[0] === pontos[1]){
+    txtEmpate.textContent = 'THE GAME TIED'
+  }
+}
+
+const btEnd = document.getElementById('bt-end')
+btEnd.addEventListener('click', ()=>{
+  resultadoFinal(point)
+})
+
+
+const btFinish = document.getElementById('bt-finish')
+btFinish.addEventListener('click', () =>{
+  reset();
+})
+// TELA FINAL
+
+
+//button reset
+
+const btReset = document.getElementById('bt-reset')
+btReset.addEventListener('click', ()=>{
+  reset();
+})
+
+//button reset
