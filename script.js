@@ -18,43 +18,42 @@ let imgplayer = [0,1]
 
 let collum1 = document.getElementById("line1");
 collum1.addEventListener("click", function () {
-  let col = "line1";
-  move(col);
+  move("line1");
+  
 });
 
 let collum2 = document.getElementById("line2");
 collum2.addEventListener("click", function () {
-  let col = "line2";
-  move(col);
+  move("line2");
 });
 
 let collum3 = document.getElementById("line3");
 collum3.addEventListener("click", function () {
-  let col = "line3";
-  move(col);
+  move("line3");
+
 });
 
 let collum4 = document.getElementById("line4");
 collum4.addEventListener("click", function () {
-  let col = "line4";
-  move(col);
+  move("line4");
+ 
 });
 
 let collum5 = document.getElementById("line5");
 collum5.addEventListener("click", function () {
-  let col = "line5";
-  move(col);
+  move("line5");
+
 });
 
 let collum6 = document.getElementById("line6");
 collum6.addEventListener("click", function () {
-  let col = "line6";
-  move(col);
+  move("line6");
+
 });
 let collum7 = document.getElementById("line7");
-collum7.addEventListener("click", function () {
-  let col = "line7";
-  move(col);
+collum7.addEventListener("click", function () { 
+  move("line7");
+
 });
 
 //function start
@@ -63,7 +62,7 @@ collum7.addEventListener("click", function () {
 
 //function move
 function move(collumm) {
-  
+    songs() 
   if (collumm === "line1") {
     for (let x = 5; x >= 0; x--) {
       if (tabuleiro[x][0] === 0) {
@@ -394,6 +393,7 @@ const clearTabuleiro = () => {
 
 const playAgain = document.getElementById('bt-playAgain');
 playAgain.addEventListener("click", function () {
+    songs()
   clearTabuleiro();
   let addClass = document.getElementById('victory');
   addClass.classList.add('hidden');
@@ -403,6 +403,7 @@ playAgain.addEventListener("click", function () {
 
 const playAgainDraw = document.getElementById('bt-playAgain-draw');
 playAgainDraw.addEventListener("click", function () {
+    songs()
   clearTabuleiro();
   let addClass = document.getElementById('draw');
   addClass.classList.add('hidden');
@@ -413,7 +414,7 @@ playAgainDraw.addEventListener("click", function () {
 
 //printWinner 
 function printWinner() {
-    
+    songWinner() 
     let bg_back = document.getElementById("black-blackground")
     bg_back.classList.remove("hidden")
 
@@ -447,6 +448,7 @@ function printWinner() {
 
 // switchPlayer
 function switchPlayer(player) {
+    songs()
   if (player === 2) {
     player = 1;
     return player;
@@ -458,6 +460,7 @@ function switchPlayer(player) {
 
 //reset
 function reset() {
+  songs()
   window.location.reload();
 }
 //reset
@@ -465,6 +468,7 @@ let changePic = true;
 // START 
 const startGame = document.getElementById('bt-start');
 startGame.addEventListener("click", function () {
+    songs()
   let enableTabuleiro = document.getElementsByClassName('disable');
   enableTabuleiro[0].classList.add('hidden');
   
@@ -475,6 +479,7 @@ startGame.addEventListener("click", function () {
 
 // changeDiv
 function changeDiv(p, position, collum) {
+    songs()
     let strId = collum + "-cel" + (position + 1);
     let div = document.getElementById(strId);
   
@@ -504,6 +509,7 @@ let controlPlayer = 0
 
 
 avatar1.addEventListener('click',function(){
+    songs()
   if (changePic === true) {
     avatares = document.getElementById('choose-person')
     status = document.getElementById("status")
@@ -517,7 +523,9 @@ avatar1.addEventListener('click',function(){
 });
 
 avatar2.addEventListener('click',function(){
+    songs()
   if (changePic === true) {
+    
     avatares = document.getElementById('choose-person')
     status = document.getElementById("status")
 
@@ -535,6 +543,7 @@ let img = ''
 let img1 =  document.getElementsByClassName('avatar-1')[0]
 img1.addEventListener("click",function(){   
     changePicture('avatar-1')
+    songs()
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
@@ -544,6 +553,7 @@ img1.addEventListener("click",function(){
 let img2 =  document.getElementsByClassName('avatar-2')[0]
 img2.addEventListener("click",function(){
     changePicture('avatar-2')
+    songs()
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
@@ -552,6 +562,7 @@ img2.addEventListener("click",function(){
 
 let img3 =  document.getElementsByClassName('avatar-3')[0]
 img3.addEventListener("click",function(){
+    songs()
     changePicture('avatar-3')
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
@@ -561,6 +572,7 @@ img3.addEventListener("click",function(){
 
 let img4 =  document.getElementsByClassName('avatar-4')[0]
 img4.addEventListener("click",function(){
+    songs()
     changePicture('avatar-4')
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
@@ -570,6 +582,7 @@ img4.addEventListener("click",function(){
 
 let img5 =  document.getElementsByClassName('avatar-5')[0]
 img5.addEventListener("click",function(){
+    songs()
     changePicture('avatar-5')
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
@@ -579,6 +592,7 @@ img5.addEventListener("click",function(){
 
 let img6 =  document.getElementsByClassName('avatar-6')[0]
 img6.addEventListener("click",function(){
+    songs()
     changePicture('avatar-6')
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
@@ -588,6 +602,7 @@ img6.addEventListener("click",function(){
 
 let img7 =  document.getElementsByClassName('avatar-7')[0]
 img7.addEventListener("click",function(){
+    songs()
     changePicture('avatar-7')
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
@@ -596,6 +611,7 @@ img7.addEventListener("click",function(){
 })
 let img8 =  document.getElementsByClassName('avatar-8')[0]
 img8.addEventListener("click",function(){
+    songs()
     changePicture('avatar-8')
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
@@ -605,6 +621,7 @@ img8.addEventListener("click",function(){
 
 let img9 =  document.getElementsByClassName('avatar-9')[0]
 img9.addEventListener("click",function(){
+    songs()
     changePicture('avatar-9')
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
@@ -614,6 +631,7 @@ img9.addEventListener("click",function(){
 
 let img10 =  document.getElementsByClassName('avatar-10')[0]
 img10.addEventListener("click",function(){
+    songs()
     changePicture('avatar-10')
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
@@ -623,6 +641,7 @@ img10.addEventListener("click",function(){
  
 
 function changePicture(classImg) {
+    songs()
     let disableAvatar = document.getElementsByClassName(`${classImg}`);
   
     if( controlPlayer === 1 ) {
@@ -644,6 +663,7 @@ function changePicture(classImg) {
         disableAvatar[0].classList.remove('avatar');
         imagem_do_pĺayer_1 = 0
         imgplayer[0] = classImg
+        songs()
         return ''
         
      }
@@ -667,6 +687,7 @@ function changePicture(classImg) {
         disableAvatar[0].classList.remove('avatar');
         imagem_do_pĺayer_2 = 0
         imgplayer[1] = classImg
+        songs()
         return ''
     }
     
@@ -688,6 +709,7 @@ function printTie() {
 // REGRAS DP JOGO 
 let rules = document.getElementById("bt-regras");
 rules.addEventListener("click", function () {
+    songs()
   let divRules = document.getElementById("gameRules");
   divRules.classList.remove("hidden");
   let blackBlackground = document.getElementById("black-blackground");
@@ -695,6 +717,7 @@ rules.addEventListener("click", function () {
 });
 let closeRules = document.getElementById("bt-closeRules");
 closeRules.addEventListener("click", function () {
+    songs()
   let divRules = document.getElementById("gameRules");
   divRules.classList.add("hidden");
   let blackBlackground = document.getElementById("black-blackground");
@@ -707,6 +730,7 @@ closeRules.addEventListener("click", function () {
 
 let btTutorial = document.getElementById("bt-tutorial");
 btTutorial.addEventListener("click", function () {
+    songs()
   let divTutorial = document.getElementById("tutorial");
   divTutorial.classList.remove("hidden");
   let blackBlackground = document.getElementById("black-blackground");
@@ -714,6 +738,7 @@ btTutorial.addEventListener("click", function () {
 });
 let closeTutorial = document.getElementById("bt-closeTutorial");
 closeTutorial.addEventListener("click", function () {
+    songs()
   let divTutorial = document.getElementById("tutorial");
   divTutorial.classList.add("hidden");
   let blackBlackground = document.getElementById("black-blackground");
@@ -725,6 +750,7 @@ closeTutorial.addEventListener("click", function () {
 
 //scorepoints
 function scorepoints(player) {
+    songs()
     if (player === 1 ){
         point[0] += 1
         let p1 = document.getElementById("placar-player1")
@@ -804,6 +830,7 @@ btEnd.addEventListener('click', ()=>{
 const btFinish = document.getElementById('bt-finish')
 btFinish.addEventListener('click', () =>{
   reset();
+  songs()
 })
 // TELA FINAL
 
@@ -813,6 +840,22 @@ btFinish.addEventListener('click', () =>{
 const btReset = document.getElementById('bt-reset')
 btReset.addEventListener('click', ()=>{
   reset();
+  songs()
 })
 
 //button reset
+
+//PLAYSONG
+
+function songs() {
+    let audio1 = document.getElementById("click")
+    audio1.play()
+}
+
+function songWinner() {
+    let audio = document.getElementById("click2")
+    audio.play()
+}
+
+
+//PLAYSONG
