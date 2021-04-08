@@ -353,7 +353,7 @@ div.avatar {
   background-size: cover;
 }
 .avatar-3{
-  background-image: url('images/saitama.png');
+  background-image: url('images/saitama2.webp');
   background-size: cover;
 }
 .avatar-4{
@@ -361,11 +361,11 @@ div.avatar {
   background-size: cover;
 }
 .avatar-5{
-  background-image: url('images/rick.jpg');
+  background-image: url('images/morty3.jpeg');
   background-size: cover;
 }
 .avatar-6{
-  background-image: url('images/bojack.jpg');
+  background-image: url('images/kingkong.jpg');
   background-size: cover;
 }
 .avatar-7{
@@ -381,7 +381,7 @@ div.avatar {
   background-size: cover;
 }
 .avatar-10{
-  background-image: url('images/chopper.png');
+  background-image: url('images/chooper2.jpg');
   background-size: cover;
 }
 
@@ -1112,4 +1112,10 @@ div#tutorial {
 }
 
 /* tela tutorial */
+
+/* hover line */
+.line:hover{
+  background-color: #1f2d5f;
+}
+/* hover line */
 }
