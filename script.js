@@ -845,7 +845,6 @@ btReset.addEventListener('click', ()=>{
 
 //button reset
 
-<<<<<<< HEAD
 
 //bt end tela empate
 
@@ -860,7 +859,6 @@ btEndEmpate.addEventListener('click', ()=>{
 
 
 //bt end tela empate
-=======
 //PLAYSONG
 
 function songs() {
@@ -875,4 +873,3 @@ function songWinner() {
 
 
 //PLAYSONG
->>>>>>> master
