@@ -114,6 +114,7 @@ body {
   margin-top: 7px;
   column-gap: 20px;
   align-items: center;
+  position: relative;
 }
 
 .bt {
@@ -130,6 +131,7 @@ body {
   background-color: #1b4863fc;
   color: white;
   font-family: "Londrina Solid", cursive;
+  cursor: pointer;
 }
 
 #bt-playAgain {
@@ -478,6 +480,9 @@ div#status-player2 {
   flex-direction: column;
   align-items: center;
 }
+div.neon {
+  animation: neon 2s alternate infinite;
+}
 /* STATUS */
 
 /* HEADER */
@@ -578,6 +583,35 @@ div#tutorial {
 
 }
 
+#box-itens-tutorial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  row-gap: 6px;
+}
+.fig-tutorial{
+  width: 46%;
+  height: 80%;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+.itens-tutorial{
+  display: flex;
+  justify-content: center;
+  column-gap: 4px;
+  width: 100%;
+  height: 28%;
+}
+.text-tutorial{
+  width: 46%;
+  height: 30%;
+  color: white;
+  font-size: 15px;
+}
+
 /* TUTORIAL */
 
 
@@ -648,8 +682,8 @@ div#draw p {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 3;
-  max-width: 515px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.705);
 }
 
 /* DISABLE */
@@ -683,7 +717,7 @@ div#final-screen p {
   max-width: 270px;
 }
 
-#moldura-final-winner{
+#moldura-final-p1{
   background-color: black;
   
   width: 65%;
@@ -711,7 +745,7 @@ div#final-screen p {
   margin-top: 40px;
 }
 
-#moldura-final-looser{
+#moldura-final-p2{
   background-color: black;
   
   width: 65%;
@@ -774,6 +808,7 @@ div#final-screen p {
   width: 130px;
   height: 130px;
   cursor: pointer;
+  font-size: 95px;
 }
 #fig-placar{
   width: 60px;
@@ -805,6 +840,7 @@ div#final-screen p {
   column-gap: 20px;
   width: 530px;
   margin-top: 30  px;
+  position: relative;
 }
 #bt-regras{
   width: 150px;
@@ -999,7 +1035,7 @@ div#final-screen p {
   height: 56px;
 }
 
-#moldura-final-winner{
+#moldura-final-p1{
   
   width: 75%;
   border-radius: 8px;
@@ -1014,9 +1050,11 @@ div#final-screen p {
 }
 
 #box-buttons-final-winner{
+  
   margin-top: 25px;
+  
 }
-#moldura-final-looser{
+#moldura-final-p2{
   background-color: black;
   
   width: 65%;
@@ -1054,7 +1092,24 @@ div#tutorial {
   max-width: 535px;
   height: 790px;
 }
-
+#box-itens-tutorial{
+  row-gap: 8px;
+}
+.fig-tutorial{
+  
+  border: 3px solid white;
+  border-radius: 8px;
+}
+.itens-tutorial{
+  column-gap: 8px;
+}
+.text-tutorial{
+  
+  font-size: 27px;
+}
+#bt-closeTutorial{
+  width: 150px;
+}
 
 /* tela tutorial */
 }

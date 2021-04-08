@@ -17,16 +17,50 @@
         <p>REGRAS</p>
         <ul>
             <li>° Jogo por rodada, ambos os players podem fazer 1 movimento por vez.</li>
-            <li>° O player deve escolher uma torre para inserir sua peça durante seu turno.</li>
+            <li>° O player deve escolher uma coluna para inserir sua peça durante seu turno.</li>
             <li>° Um player vence quando consegue 4 peças em sequência, em linha vertical, horizontal ou diagonal.</li>
             <li>° Um empate acontece quando nenhum dos players conseguem atingir uma condição de vitória e as peças do tabuleiro estão todas ocupadas.</li>
         </ul>
 
         <button class="bt" id="bt-closeRules">FECHAR</button>
     </div>
-    <div class="hidden" id="tutorial">
 
-        <button class="bt" id="bt-closeTutorial">FECHAR</button>
+    <div id="tutorial" class="hidden">
+
+        <div id="box-itens-tutorial">
+
+            <div id="iniciar-partida" class="itens-tutorial">
+                <figure id="fig-iniciar-partida" class="fig-tutorial">
+                    <img src="" alt="" id="img-iniciar-partida">
+                    <figcaption class="hidden">Como iniciar uma partida</figcaption>
+                </figure>
+                <p class="text-tutorial">Para começar uma partida é preciso escolher o avatar de cada jogador, clique no simbolo em destaque
+                     para abrir as opções de avatar.
+                </p>
+            </div>
+
+            <div id="jogar-peca" class="itens-tutorial">
+                <p class="text-tutorial">Quando for sua vez de jogar, clique em uma das linhas do tabuleiro para inserir uma peça
+                    no primeiro campo disponível de baixo para cima.
+                </p>
+                <figure id="jogar-peca-partida" class="fig-tutorial">
+                    <img src="" alt="" id="jogar-peca-partida">
+                    <figcaption class="hidden">Como jogar peças no tabuleiro</figcaption>
+                </figure>
+            </div>
+
+            <div id="tutorial-vitoria" class="itens-tutorial">
+                <figure id="fig-tutorial-vitoria" class="fig-tutorial">
+                    <img src="" alt="" id="img-tutorial-vitoria">
+                    <figcaption class="hidden">Condições de vitória</figcaption>
+                </figure>
+                <p class="text-tutorial">Um jogador vence a partida quando consegue quatro peças em sequência na horizontal, vertical ou diagonal</p>
+            </div>
+
+            <button class="bt" id="bt-closeTutorial">FECHAR</button>
+        </div>
+
+        
     </div>
 
     <div class='hidden' id='choose-person'>
@@ -143,17 +177,17 @@
                 <div id="box-final-winner">
                     
                     <div id="final-player1" class="box-player-final">
-                        <div id="moldura-final-winner" class="moldura-final">
+                        <div id="moldura-final-p1" class="moldura-final">
                         
                         </div>
                         <span id="placar-final-player1" class="placar-final">0</span>
                     </div>
                     
                     
-                    <p>Player <span id="span"> </span> is Winner</p>
+                    <p id="final-text">Player <span id="player-winner"> </span> is Winner</p>
 
                     <div id="final-player2" class="box-player-final">
-                        <div id="moldura-final-looser" class="moldura-final">
+                        <div id="moldura-final-p2" class="moldura-final">
                         
                         </div>
                         <span id="placar-final-player2" class="placar-final">0</span>
@@ -191,7 +225,7 @@
 
                 <div id="tabuleiro">
 
-                    <div class='hidden disable'></div>
+                    <div class='disable'></div>
                     
                     <div id="line1" class="line">
     
@@ -279,7 +313,7 @@
 
                 <div id="status-player1" class="box-status">
                     <div id="info-player1" class="info-player">
-                        <div id="fig-avatar-player1" class="fig-avatar">?</div>
+                        <div id="fig-avatar-player1" class="neon fig-avatar">?</div>
                         <span class="name-player">PLAYER 1</span>
                     </div>
 
@@ -296,7 +330,7 @@
 
                 <div id="status-player2" class="box-status">
                     <div id="info-player2" class="info-player">
-                        <div id="fig-avatar-player2" class="fig-avatar">?</div>
+                        <div id="fig-avatar-player2" class="neon fig-avatar">?</div>
                         <span class="name-player">PLAYER 2</span>
                     </div>
 
@@ -305,9 +339,9 @@
             </div>
 
             <div id="controls">
-                
-                    <input type="button" value="RESET" id="bt-reset" class="bt">
-                    <input type="button" value="START" id="bt-start" class="bt">
+                <div class='disable'></div>
+                <input type="button" value="RESET" id="bt-reset" class="bt">
+                <input type="button" value="START" id="bt-start" class="bt">
                 
                 
                 

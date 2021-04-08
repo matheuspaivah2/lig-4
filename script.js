@@ -12,6 +12,10 @@ let anterior2 = '';
 let player = 2;
 let point = [0,0]
 //
+//imgplayer
+let imgplayer = [0,1]
+//imgplayer
+
 let collum1 = document.getElementById("line1");
 collum1.addEventListener("click", function () {
   let col = "line1";
@@ -372,6 +376,16 @@ const clearTabuleiro = () => {
       let removeClass = document.getElementById(id);
       removeClass.classList.remove('player1');
       removeClass.classList.remove('player2');
+      removeClass.classList.remove('avatar-1');
+      removeClass.classList.remove('avatar-2');
+      removeClass.classList.remove('avatar-3');
+      removeClass.classList.remove('avatar-4');
+      removeClass.classList.remove('avatar-5');
+      removeClass.classList.remove('avatar-6');
+      removeClass.classList.remove('avatar-7');
+      removeClass.classList.remove('avatar-8');
+      removeClass.classList.remove('avatar-9');
+      removeClass.classList.remove('avatar-10');
     }
   }
   tabuleiro = [
@@ -382,6 +396,7 @@ const clearTabuleiro = () => {
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
   ];
+  return tabuleiro;
 }
 
 //clear tabuleiro
@@ -461,6 +476,17 @@ function reset() {
   window.location.reload();
 }
 //reset
+let changePic = true;
+// START 
+const startGame = document.getElementById('bt-start');
+startGame.addEventListener("click", function () {
+  let enableTabuleiro = document.getElementsByClassName('disable');
+  enableTabuleiro[0].classList.add('hidden');
+  
+  changePic = false;
+  
+});
+// START
 
 // changeDiv
 function changeDiv(p, position, collum) {
@@ -479,9 +505,10 @@ function changeDiv(p, position, collum) {
       return "";
     }
 }
-
+ 
 // changeDiv
 
+// changePic
 
 let avatar1 = document.getElementById('status-player1')
 let avatar2 = document.getElementById('status-player2')
@@ -489,73 +516,124 @@ let avatares = document.getElementById('choose-person')
 let status = document.getElementById("status")
 let controlPlayer = 0
 
+
+
 avatar1.addEventListener('click',function(){
+  if (changePic === true) {
     avatares = document.getElementById('choose-person')
     status = document.getElementById("status")
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
     controlPlayer = 1
-})
+    let classNeon = document.getElementById('fig-avatar-player1');
+    classNeon.classList.remove('neon');
+  }
+});
 
 avatar2.addEventListener('click',function(){
+  if (changePic === true) {
     avatares = document.getElementById('choose-person')
     status = document.getElementById("status")
 
     avatares.classList.remove("hidden")
     avatares.classList.add("container-avatar")
     controlPlayer = 0
+    let classNeon = document.getElementById('fig-avatar-player2');
+    classNeon.classList.remove('neon');
+  }
 
 })
+
 
 let img = ''
 let img1 =  document.getElementsByClassName('avatar-1')[0]
 img1.addEventListener("click",function(){   
     changePicture('avatar-1')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img2 =  document.getElementsByClassName('avatar-2')[0]
 img2.addEventListener("click",function(){
     changePicture('avatar-2')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img3 =  document.getElementsByClassName('avatar-3')[0]
 img3.addEventListener("click",function(){
     changePicture('avatar-3')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img4 =  document.getElementsByClassName('avatar-4')[0]
 img4.addEventListener("click",function(){
     changePicture('avatar-4')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img5 =  document.getElementsByClassName('avatar-5')[0]
 img5.addEventListener("click",function(){
     changePicture('avatar-5')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img6 =  document.getElementsByClassName('avatar-6')[0]
 img6.addEventListener("click",function(){
     changePicture('avatar-6')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img7 =  document.getElementsByClassName('avatar-7')[0]
 img7.addEventListener("click",function(){
     changePicture('avatar-7')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 let img8 =  document.getElementsByClassName('avatar-8')[0]
 img8.addEventListener("click",function(){
     changePicture('avatar-8')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img9 =  document.getElementsByClassName('avatar-9')[0]
 img9.addEventListener("click",function(){
     changePicture('avatar-9')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
 
 let img10 =  document.getElementsByClassName('avatar-10')[0]
 img10.addEventListener("click",function(){
     changePicture('avatar-10')
+    if (anterior1 !== '' && anterior2 !== '') {
+      let disableButton = document.getElementsByClassName('disable');
+      disableButton[1].classList.add('hidden');
+    }
 })
  
 
@@ -580,6 +658,7 @@ function changePicture(classImg) {
         
         disableAvatar[0].classList.remove('avatar');
         imagem_do_pĺayer_1 = 0
+        imgplayer[0] = classImg
         return ''
         
      }
@@ -602,6 +681,7 @@ function changePicture(classImg) {
         
         disableAvatar[0].classList.remove('avatar');
         imagem_do_pĺayer_2 = 0
+        imgplayer[1] = classImg
         return ''
     }
     
@@ -681,3 +761,61 @@ document.addEventListener('click', () => {
 })
 
 //
+
+// TELA FINAL
+
+
+
+const resultadoFinal = (pontos) =>{
+  const imgP1 = document.getElementById('moldura-final-p1')
+  const imgP2 = document.getElementById('moldura-final-p2')
+  const txtEmpate = document.getElementById('final-text')
+  const nameWinner = document.getElementById('player-winner')
+  const pontosP1 = document.getElementById('placar-final-player1')
+  const pontosP2 = document.getElementById('placar-final-player2')
+  const telaFinal = document.getElementById('final-screen')
+  
+  telaFinal.classList.remove('hidden')
+
+  
+
+  imgP1.classList.add(`${imgplayer[0]}`);
+
+  
+  imgP2.classList.add(`${imgplayer[1]}`);
+
+  pontosP1.textContent = `${pontos[0]}`
+  pontosP2.textContent = `${pontos[1]}`
+
+  if(pontos[0] > pontos[1]){
+    nameWinner.textContent = '1'
+  }
+  if(pontos[0] < pontos[1]){
+    nameWinner.textContent = '2'
+  }
+  if(pontos[0] === pontos[1]){
+    txtEmpate.textContent = 'THE GAME TIED'
+  }
+}
+
+const btEnd = document.getElementById('bt-end')
+btEnd.addEventListener('click', ()=>{
+  resultadoFinal(point)
+})
+
+
+const btFinish = document.getElementById('bt-finish')
+btFinish.addEventListener('click', () =>{
+  reset();
+})
+// TELA FINAL
+
+
+//button reset
+
+const btReset = document.getElementById('bt-reset')
+btReset.addEventListener('click', ()=>{
+  reset();
+})
+
+//button reset
