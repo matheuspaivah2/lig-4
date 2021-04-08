@@ -717,7 +717,7 @@ div#final-screen p {
   max-width: 270px;
 }
 
-#moldura-final-winner{
+#moldura-final-p1{
   background-color: black;
   
   width: 65%;
@@ -745,7 +745,7 @@ div#final-screen p {
   margin-top: 40px;
 }
 
-#moldura-final-looser{
+#moldura-final-p2{
   background-color: black;
   
   width: 65%;
@@ -1035,7 +1035,7 @@ div#final-screen p {
   height: 56px;
 }
 
-#moldura-final-winner{
+#moldura-final-p1{
   
   width: 75%;
   border-radius: 8px;
@@ -1050,9 +1050,11 @@ div#final-screen p {
 }
 
 #box-buttons-final-winner{
+  
   margin-top: 25px;
+  
 }
-#moldura-final-looser{
+#moldura-final-p2{
   background-color: black;
   
   width: 65%;
