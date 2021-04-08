@@ -477,6 +477,8 @@ startGame.addEventListener("click", function () {
     let pulsarPlayer = document.getElementById('fig-avatar-player1');
     pulsarPlayer.classList.add('pulsar');
     buttonStart = false;
+    let neonStart = document.getElementById('bt-start');
+    neonStart.classList.remove('neon');
   }
 
   
@@ -492,6 +494,7 @@ function changeDiv(p, position, collum) {
     if (p === 1) {
       let a1 = document.getElementById('fig-avatar-player1')
       div.classList.add("player1");
+      div.classList.add("transition");
       div.classList.add(a1.classList[0]);
       let pulsarPlayer = document.getElementById('fig-avatar-player1');
       pulsarPlayer.classList.remove('pulsar');
@@ -501,6 +504,7 @@ function changeDiv(p, position, collum) {
     } else {
       let a2 = document.getElementById('fig-avatar-player2')
       div.classList.add( a2.classList[0]);
+      div.classList.add("transition");
       div.classList.add("player2");
       let pulsarPlayer = document.getElementById('fig-avatar-player2');
       pulsarPlayer.classList.remove('pulsar');
@@ -561,6 +565,8 @@ img1.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 
@@ -571,6 +577,8 @@ img2.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 
@@ -581,6 +589,8 @@ img3.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 
@@ -591,6 +601,8 @@ img4.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 
@@ -601,6 +613,8 @@ img5.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 
@@ -611,6 +625,8 @@ img6.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 
@@ -621,6 +637,8 @@ img7.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 let img8 =  document.getElementsByClassName('avatar-8')[0]
@@ -630,6 +648,8 @@ img8.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 
@@ -640,6 +660,8 @@ img9.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
 
@@ -650,6 +672,8 @@ img10.addEventListener("click",function(){
     if (anterior1 !== '' && anterior2 !== '') {
       let disableButton = document.getElementsByClassName('disable');
       disableButton[1].classList.add('hidden');
+      let neonStart = document.getElementById('bt-start');
+      neonStart.classList.add('neon');
     }
 })
  
@@ -842,6 +866,20 @@ btReset.addEventListener('click', ()=>{
 
 //button reset
 
+
+//bt end tela empate
+
+const btEndEmpate = document.getElementById('bt-end-draw')
+btEndEmpate.addEventListener('click', ()=>{
+  const telaEmpate = document.getElementById('draw')
+  telaEmpate.classList.add('hidden')
+
+  resultadoFinal(point)
+
+})
+
+
+//bt end tela empate
 //PLAYSONG
 
 function songs() {
