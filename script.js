@@ -566,6 +566,7 @@ function changePicture(classImg) {
         }
         anterior1 = classImg;
         let a1 = document.getElementById('fig-avatar-player1')
+        a1.textContent = ''
         a1.className = ""
         a1.classList.add(`${classImg}`)
         a1.classList.add(`fig-avatar`)
@@ -587,6 +588,7 @@ function changePicture(classImg) {
         }
         anterior2 = `${classImg}`
         let a2 = document.getElementById('fig-avatar-player2')
+        a2.textContent = ''
         a2.className = ""
         a2.classList.add(`${classImg}`)
         a2.classList.add(`fig-avatar`)
