@@ -486,11 +486,13 @@ function changeDiv(p, position, collum) {
     if (p === 1) {
       let a1 = document.getElementById('fig-avatar-player1')
       div.classList.add("player1");
+      div.classList.add("transition");
       div.classList.add(a1.classList[0]);
       return "";
     } else {
       let a2 = document.getElementById('fig-avatar-player2')
       div.classList.add( a2.classList[0]);
+      div.classList.add("transition");
       div.classList.add("player2");
       return "";
     }
