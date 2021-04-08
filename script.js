@@ -464,18 +464,21 @@ function reset() {
 
 // changeDiv
 function changeDiv(p, position, collum) {
-  let strId = collum + "-cel" + (position + 1);
-  let div = document.getElementById(strId);
-
-  if (p === 1) {
-    div.classList.add("player1");
-    return "";
-  } else {
-    div.classList.add("player2");
-    return "";
-  }
+    let strId = collum + "-cel" + (position + 1);
+    let div = document.getElementById(strId);
+  
+    if (p === 1) {
+      let a1 = document.getElementById('fig-avatar-player1')
+      div.classList.add("player1");
+      div.classList.add(a1.classList[0]);
+      return "";
+    } else {
+      let a2 = document.getElementById('fig-avatar-player2')
+      div.classList.add( a2.classList[0]);
+      div.classList.add("player2");
+      return "";
+    }
 }
-
 
 // changeDiv
 
