@@ -8,6 +8,7 @@ let tabuleiro = [
 ];
 let anterior1 = '';
 let anterior2 = '';
+let buttonStart = true;
 //
 let player = 2;
 let point = [0,0]
@@ -62,7 +63,7 @@ collum7.addEventListener("click", function () {
 
 //function move
 function move(collumm) {
-    songs() 
+    songs(); 
   if (collumm === "line1") {
     for (let x = 5; x >= 0; x--) {
       if (tabuleiro[x][0] === 0) {
@@ -468,11 +469,16 @@ let changePic = true;
 // START 
 const startGame = document.getElementById('bt-start');
 startGame.addEventListener("click", function () {
+  if (buttonStart === true) {
     songs()
-  let enableTabuleiro = document.getElementsByClassName('disable');
-  enableTabuleiro[0].classList.add('hidden');
-  
-  changePic = false;
+    let enableTabuleiro = document.getElementsByClassName('disable');
+    enableTabuleiro[0].classList.add('hidden');
+    changePic = false;
+    let pulsarPlayer = document.getElementById('fig-avatar-player1');
+    pulsarPlayer.classList.add('pulsar');
+    buttonStart = false;
+  }
+
   
 });
 // START
@@ -487,11 +493,19 @@ function changeDiv(p, position, collum) {
       let a1 = document.getElementById('fig-avatar-player1')
       div.classList.add("player1");
       div.classList.add(a1.classList[0]);
+      let pulsarPlayer = document.getElementById('fig-avatar-player1');
+      pulsarPlayer.classList.remove('pulsar');
+      pulsarPlayer = document.getElementById('fig-avatar-player2');
+      pulsarPlayer.classList.add('pulsar');
       return "";
     } else {
       let a2 = document.getElementById('fig-avatar-player2')
       div.classList.add( a2.classList[0]);
       div.classList.add("player2");
+      let pulsarPlayer = document.getElementById('fig-avatar-player2');
+      pulsarPlayer.classList.remove('pulsar');
+      pulsarPlayer = document.getElementById('fig-avatar-player1');
+      pulsarPlayer.classList.add('pulsar');
       return "";
     }
 }
@@ -767,23 +781,6 @@ function scorepoints(player) {
 
 
 //scorepoints 
-
-// cursor 
-let mouse = document.querySelector('.mouse');
-
-document.addEventListener('mousemove', event => {
-    mouse.setAttribute("style", "top: "+(event.pageY - 10)+"px; left: "+(event.pageX - 10)+"px;")
-})
-
-document.addEventListener('click', () => {
-    mouse.classList.add("expand");
-
-    setTimeout(() => {
-        mouse.classList.remove("expand");
-    }, 500)
-})
-
-//
 
 // TELA FINAL
 
