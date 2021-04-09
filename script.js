@@ -401,6 +401,8 @@ playAgain.addEventListener("click", function () {
   addClass.classList.add('hidden');
   addClass = document.getElementById('black-blackground');
   addClass.classList.add('hidden');
+  const molduraWinner = document.getElementById('moldura-winner');
+  molduraWinner.removeAttribute('class');
 });
 
 const playAgainDraw = document.getElementById('bt-playAgain-draw');
