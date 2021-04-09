@@ -773,6 +773,27 @@ div#final-screen p {
 }
 /*JOGADOR DA VEZ*/
 
+/* gifs */
+
+#fig-iniciar-partida{
+  background-image: url('images/startgame.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+#jogar-peca-partida{
+  background-image: url('images/jogarpeça.gif');
+  background-position: center;
+  background-size: cover;
+}
+#fig-tutorial-vitoria{
+  background-image: url('images/condivitoria.gif');
+  background-position: center;
+  background-size: cover;
+}
+
+/* gifs */
+
 @media screen and (min-width: 420px) {
   #menu{
     margin-left: 0px;
@@ -1113,7 +1134,7 @@ div#tutorial {
 
 /* hover line */
 .line:hover{
-  background-color: #1f2d5f;
+  background-color: #21273d;
 }
 /* hover line */
 }
