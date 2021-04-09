@@ -1137,6 +1137,9 @@ div#tutorial {
   background-color: #21273d;
 }
 /* hover line */
+footer p {
+  font-size: 20px;
+}
 }
 
 
